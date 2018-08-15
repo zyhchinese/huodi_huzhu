@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="0dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消订单"
+            android:textColor="#c31023"
+            android:textSize="18sp" />
+        <View
+            android:layout_marginTop="10dp"
+            android:background="#c31023"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <LinearLayout
+            android:paddingRight="20dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="◎"
+                android:textSize="20dp"
+                android:textColor="#343434"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="#343434"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical"
+                android:text="司机接单前及接单后三分钟内可免费取消"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="◎"
+                android:textSize="20dp"
+                android:textColor="#343434"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_feilv"
+                android:textColor="#343434"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical"
+                android:text="司机接单三分钟后取消，将扣您10%的费用"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_jixudingdan"
+                android:background="@drawable/bg_orovince_bg"
+                android:text="继续订单"
+                android:textColor="#ffffff"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_quxiaodingdan"
+                android:background="@drawable/bg_orovince_bg1"
+                android:layout_marginLeft="10dp"
+                android:text="取消订单"
+                android:textColor="#ffffff"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</android.support.v7.widget.CardView>

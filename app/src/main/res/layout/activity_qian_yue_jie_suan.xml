@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#eee">
+
+    <include layout="@layout/layout_base_common_title"></include>
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#eee"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_weight="6"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/act_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="#ffffff"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <RelativeLayout
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <CheckBox
+                    android:button="@mipmap/img_huodixuanze"
+                    android:id="@+id/img_xuanshang"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/img_xuanshang"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ca1827"
+                    android:text="全选"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_total_money"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="共0元"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_next"
+                android:text="下一步"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:background="#ca1827"
+                android:layout_weight="1.2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

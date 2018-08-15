@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="17dp"
+        android:src="@mipmap/car" />
+
+    <View
+        android:id="@+id/sxview"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/logo"
+        android:background="#EEE" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="19dp"
+    android:layout_toRightOf="@id/sxview"
+    android:layout_centerVertical="true"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#333333"
+        android:layout_marginBottom="17dp"
+        android:text="宝马3系" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/title"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="厂商指导价："
+            android:textColor="#888888"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#c30e21"
+            android:id="@+id/jg"
+            android:text=" 00.000 "
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="万起"
+            android:textColor="#888888"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+</LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:background="#eee" />
+</RelativeLayout>

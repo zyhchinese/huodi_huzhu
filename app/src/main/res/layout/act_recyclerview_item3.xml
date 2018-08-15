@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:background="@drawable/bg_radiobutton_bg"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+    <ImageView
+        android:layout_marginTop="3.5dp"
+        android:id="@+id/img_dian"
+        android:src="@mipmap/icon_banner_select"
+        android:layout_width="12dp"
+        android:layout_height="12dp" />
+    <TextView
+        android:layout_toRightOf="@+id/img_dian"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/tv_car_type"
+        android:text="预约车型："
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_car"
+        android:text="麦巴特"
+        android:textSize="12sp"
+        android:layout_toRightOf="@+id/tv_car_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_daishenhe"
+        android:text="待审核"
+        android:textSize="10sp"
+        android:textColor="#f7d80b"
+        android:layout_marginTop="1.5dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_yue_name"
+        android:text="预约姓名："
+        android:layout_alignLeft="@+id/tv_car_type"
+        android:layout_below="@+id/tv_car_type"
+        android:layout_marginTop="28dp"
+        android:textSize="10sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_name"
+        android:text="段一心"
+        android:textSize="10sp"
+        android:layout_alignBottom="@+id/tv_yue_name"
+        android:layout_toRightOf="@+id/tv_yue_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textSize="10sp"
+        android:id="@+id/tv_phone"
+        android:text="15000022333"
+        android:layout_alignBottom="@+id/tv_name"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textSize="10sp"
+        android:id="@+id/tv_daodian_time"
+        android:text="到店时间："
+        android:layout_alignLeft="@+id/tv_yue_name"
+        android:layout_below="@+id/tv_yue_name"
+        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textSize="10sp"
+        android:id="@+id/tv_time"
+        android:text="2017年9月15日"
+        android:layout_alignBottom="@+id/tv_daodian_time"
+        android:layout_toRightOf="@+id/tv_daodian_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        android:id="@+id/view"
+        android:background="#d9d4d4"
+        android:layout_below="@+id/tv_time"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <TextView
+        android:textSize="10sp"
+        android:id="@+id/tv_zhu"
+        android:text="注："
+        android:textColor="#a6a4a4"
+        android:layout_below="@+id/view"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textSize="10sp"
+        android:id="@+id/tv_zhushi"
+        android:text="等待审核"
+        android:textColor="#a6a4a4"
+        android:layout_alignBottom="@+id/tv_zhu"
+        android:layout_toRightOf="@+id/tv_zhu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/img_delete"
+        android:src="@mipmap/gwc_delete"
+        android:layout_alignBottom="@+id/tv_zhushi"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+
+</RelativeLayout>

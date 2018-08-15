@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_base_common_title"></include>
+
+    <ScrollView
+        android:background="#ffffff"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@mipmap/bg_white_round_corners"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="8dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/img_huodimima1" />
+
+                    <EditText
+                        android:id="@+id/etPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/shape_button_login_hei11"
+                        android:paddingLeft="10dp"
+                        android:hint="请输入您的手机号"
+                        android:textColor="#686565"
+                        android:textColorHint="#686565"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <!--<View-->
+                    <!--style="@style/h_line"-->
+                    <!--android:layout_marginBottom="10dp"-->
+                    <!--android:layout_marginTop="10dp"></View>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="8dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/img_huodimima3" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_code"
+                            android:layout_width="0dp"
+                            android:layout_height="42dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="3"
+                            android:background="@drawable/shape_button_login_hei11"
+                            android:paddingLeft="10dp"
+                            android:hint="填写验证码"
+                            android:textColor="#686565"
+                            android:textColorHint="#686565"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tvAuthCode"
+                            android:layout_width="0dp"
+                            android:layout_height="42dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="2"
+                            android:background="#ca1827"
+                            android:gravity="center"
+                            android:paddingBottom="12dp"
+                            android:paddingTop="12dp"
+                            android:text="发送验证码"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/bg_white_round_corners"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="8dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/img_huodimima2" />
+
+                    <EditText
+                        android:id="@+id/et_new_pwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/shape_button_login_hei11"
+                        android:paddingLeft="10dp"
+                        android:hint="请设置密码"
+                        android:paddingRight="10dp"
+                        android:textColor="#686565"
+                        android:textColorHint="#686565"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <!--<View-->
+                    <!--style="@style/h_line"-->
+                    <!--android:layout_marginBottom="10dp"-->
+                    <!--android:layout_marginTop="10dp"></View>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="8dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/img_huodimima2" />
+
+                    <EditText
+                        android:id="@+id/et_check_pwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/shape_button_login_hei11"
+                        android:paddingLeft="10dp"
+                        android:hint="请再次确认密码"
+                        android:paddingRight="10dp"
+                        android:textColor="#686565"
+                        android:textColorHint="#686565"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="30dp"
+                android:id="@+id/tv_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="100dp"
+                android:background="#ca1827"
+                android:gravity="center"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:text="完成"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

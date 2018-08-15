@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/layout_list_container"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical">
+
+    <com.lx.hd.refresh.RecyclerRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeeee"
+        android:visibility="visible"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lay_notification"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/lay_48"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/lay_16"
+                android:paddingRight="@dimen/lay_16"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:drawableLeft="@mipmap/ic_information"
+                    android:drawablePadding="4dp"
+                    android:gravity="center|left"
+                    android:text="@string/content_upload_error_hint"
+                    android:textSize="@dimen/font_14"
+                    tools:ignore="RtlHardcoded"/>
+
+                <Button
+                    android:id="@+id/bt_ignore"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/lay_16"
+                    android:background="@drawable/drafts_ignore_bg"
+                    android:elevation="0dp"
+                    android:outlineProvider="none"
+                    android:text="@string/notification_ignore_hint"
+                    android:textColor="@color/text_secondary_color"
+                    android:textSize="@dimen/font_12"
+                    tools:ignore="RtlHardcoded"
+                    tools:targetApi="lollipop"/>
+
+                <Button
+                    android:id="@+id/bt_retry"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/drafts_retry_bg"
+                    android:elevation="0dp"
+                    android:outlineProvider="none"
+                    android:text="@string/notification_retry_hint"
+                    android:textColor="@color/account_pressed_true"
+                    android:textSize="@dimen/font_12"
+                    tools:targetApi="lollipop"/>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/notification_baseline"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="?attr/dividerHorizontal"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:background="#eeeeee"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"/>
+
+        </LinearLayout>
+    </com.lx.hd.refresh.RecyclerRefreshLayout>
+
+    <com.lx.hd.refresh.EmptyLayout
+        android:id="@+id/error_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</FrameLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_width="300dp"
+        android:layout_height="200dp">
+        <RadioGroup
+            android:id="@+id/rg"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rb1"
+                android:button="@null"
+                android:drawablePadding="20dp"
+                android:drawableLeft="@mipmap/img_huodizhifuxuanze"
+                android:drawableRight="@mipmap/zhifubao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:button="@null"
+                android:drawableLeft="@mipmap/select_f"
+                android:drawablePadding="20dp"
+                android:drawableRight="@mipmap/wechat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/rb3"
+                android:button="@null"
+                android:drawableLeft="@mipmap/select_f"
+                android:drawablePadding="20dp"
+                android:drawableRight="@mipmap/qianbao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+        <TextView
+            android:id="@+id/zhifubaopay"
+            android:text="支付宝支付"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            android:layout_alignTop="@+id/rg"
+            android:layout_toRightOf="@+id/rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/weixinpay"
+            android:text="微信支付"
+            android:textSize="18sp"
+            android:layout_marginTop="25dp"
+            android:layout_alignLeft="@+id/zhifubaopay"
+            android:layout_below="@+id/zhifubaopay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="余额支付"
+            android:id="@+id/tv_yue_pay"
+            android:layout_alignLeft="@+id/weixinpay"
+            android:layout_below="@+id/weixinpay"
+            android:layout_marginTop="26dp"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_yue"
+            android:layout_alignLeft="@+id/tv_yue_pay"
+            android:layout_below="@+id/tv_yue_pay"
+            android:text="123456789"
+            android:layout_marginTop="5dp"
+            android:textColor="#ff0000"
+            android:textSize="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

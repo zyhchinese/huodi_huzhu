@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <com.lx.hd.widgets.CustomViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewpage">
+
+    </com.lx.hd.widgets.CustomViewPager>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_flash"
+        android:src="@drawable/select_light"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="120dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="30dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:id="@+id/img_back"
+            android:src="@mipmap/icon_base_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_title_scaner"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img_back"
+            android:textColor="@color/white"
+            android:text="扫码充电"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:id="@+id/img_select_code"
+            android:src="@mipmap/icon_select_code"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/lly_bottom"
+        android:visibility="gone"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:orientation="horizontal"
+        android:background="#AA111111">
+
+        <LinearLayout
+            android:id="@+id/linear0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_scanner"
+                android:background="@drawable/select_scanner" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_scanner"
+                android:text="扫码"
+                android:layout_marginTop="10dp"
+                android:textColor="#FFFFFF"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_input"
+                android:background="@drawable/select_input_code"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_input"
+                android:text="终端编号"
+                android:layout_marginTop="7dp"
+                android:textColor="#FFFFFF"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tv_tips"
+            android:textColor="@color/white"
+            android:text="将二维码/条形码对准取景框，即可自动扫描"/>
+    </RelativeLayout>
+</RelativeLayout>

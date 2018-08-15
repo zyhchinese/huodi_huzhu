@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f5f5f5"
+    android:orientation="vertical"
+    android:baselineAligned="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/img_zhangdanmingxi456"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/img_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:src="@mipmap/czmx_cj" />
+
+            <TextView
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:textColor="#ffe307"
+                android:background="@drawable/huodi_wode_renzheng_shape"
+                android:textSize="16sp"
+                android:id="@+id/Price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/img_icon"
+                android:layout_toRightOf="@+id/img_icon"
+                android:text="+500.00" />
+
+            <TextView
+                android:textSize="16sp"
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="2017/02/06"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#EEEEEE" />
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:id="@+id/tv_order_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/img_icon1"
+                android:text="交易单号" />
+
+            <TextView
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:id="@+id/oddnumbers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_order_no"
+                android:gravity="right"
+                android:paddingLeft="20dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#EEEEEE" />
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/czdh_super"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:id="@+id/czdh_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/img_icon2"
+                android:text="充值单号" />
+
+            <TextView
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:id="@+id/rechargeoddnumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/czdh_title"
+                android:gravity="right"
+                android:paddingLeft="20dp" />
+        </RelativeLayout>
+
+        <!--<TextView-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:background="#EEEEEE" />-->
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="16sp"
+                android:textColor="#ffffff"
+                android:id="@+id/czlx_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/img_icon3"
+                android:text="充值类型" />
+
+            <TextView
+                android:textSize="16sp"
+                android:textColor="#ffffff"
+                android:id="@+id/rechargetype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="支付宝平台" />
+        </RelativeLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#EEEEEE" />
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/img_icon3"
+                android:text="交易类型" />
+
+            <TextView
+                android:background="@drawable/huodi_wode_renzheng_shape"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:id="@+id/rechargetype111"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="搬家" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/czmx_qr"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#f5f5f5">
+
+    <RelativeLayout
+        android:background="#e60202"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_saoma"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@mipmap/yhj_fh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:background="@drawable/shangcheng_sousuokuang_shape"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/tv_sousuo"
+            android:layout_toRightOf="@+id/img_saoma"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/img_huodisousuo123"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/ed_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:maxLines="1"
+                android:hint="搜索您想要的商品"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:textSize="16sp"
+            android:id="@+id/tv_sousuo"
+            android:text="搜索"
+            android:padding="5dp"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        app:tabSelectedTextColor="#c31023"
+        app:tabBackground="@drawable/tab_background"
+        app:tabTextColor="#282828"
+        app:tabIndicatorColor="#c31023"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+    </android.support.design.widget.TabLayout>
+
+    <View
+        android:background="#eee"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

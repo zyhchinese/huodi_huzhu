@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="match_parent"
+    tools:context="com.lx.hd.ui.activity.PileApplyActivity">
+
+
+
+    <com.lx.hd.widgets.MyNestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.youth.banner.Banner
+                android:visibility="gone"
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:indicator_drawable_selected="@mipmap/icon_banner_select"
+                app:indicator_drawable_unselected="@mipmap/icon_banner_unselect"
+                app:indicator_height="8dp"
+                app:indicator_margin="4dp"
+                app:indicator_width="8dp" />
+
+            <LinearLayout
+                android:layout_marginTop="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/msc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/msc" />
+                <ImageView
+                    android:id="@+id/xny_car"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/img_newpower" />
+
+                <ImageView
+                    android:id="@+id/jfsc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/shopping2" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/shopping3"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/shopping3" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/shopping4"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/shopping4" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.lx.hd.widgets.MyNestedScrollView>
+    <RelativeLayout
+        android:id="@+id/rly_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="45px"
+            android:padding="15dp"
+            android:src="@mipmap/shopmain_menu" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="23dp"
+            android:layout_toRightOf="@+id/tv_location"
+            android:id="@+id/gwc"
+            android:padding="15dp"
+            android:src="@mipmap/gwc" />
+    </RelativeLayout>
+</RelativeLayout>

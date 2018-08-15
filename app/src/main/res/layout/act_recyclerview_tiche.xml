@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:background="#eee"
+        android:textColor="#a0a0a0"
+        android:text="提车信息  (1)"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relative11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="车辆型号" />
+
+            <TextView
+                android:id="@+id/tv_car_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="雪佛兰" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view11"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignLeft="@+id/relative11"
+            android:layout_below="@id/relative11"
+            android:layout_marginTop="10dp"
+            android:background="#eee">
+
+        </View>
+
+        <RelativeLayout
+            android:id="@+id/relative12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/relative11"
+            android:layout_alignRight="@+id/relative11"
+            android:layout_below="@+id/view11"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="需求数量" />
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="10辆" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view12"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignLeft="@+id/relative12"
+            android:layout_below="@id/relative12"
+            android:layout_marginTop="10dp"
+            android:background="#eee"></View>
+
+        <RelativeLayout
+            android:id="@+id/relative13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/relative12"
+            android:layout_alignRight="@+id/relative12"
+            android:layout_below="@+id/view12"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="租车类型" />
+
+            <TextView
+                android:id="@+id/tv_zuche_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="长租" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view13"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignLeft="@+id/relative13"
+            android:layout_below="@id/relative13"
+            android:layout_marginTop="10dp"
+            android:background="#eee"></View>
+
+        <RelativeLayout
+            android:id="@+id/relative14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/relative13"
+            android:layout_alignRight="@+id/relative13"
+            android:layout_below="@+id/view13"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="租车时长" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="1年" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view14"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignLeft="@+id/relative14"
+            android:layout_below="@id/relative14"
+            android:layout_marginTop="10dp"
+            android:background="#eee"></View>
+
+        <RelativeLayout
+            android:id="@+id/relative15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/relative14"
+            android:layout_alignRight="@+id/relative14"
+            android:layout_below="@+id/view14"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="价格标准" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="¥200/年" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view15"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignLeft="@+id/relative15"
+            android:layout_below="@id/relative15"
+            android:layout_marginTop="10dp"
+            android:background="#eee"></View>
+
+
+        <RelativeLayout
+            android:id="@+id/relative16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/relative15"
+            android:layout_alignRight="@+id/relative15"
+            android:layout_below="@+id/view15"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="车型总价" />
+
+            <TextView
+                android:id="@+id/tv_car_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="1000元" />
+
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/view16"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignLeft="@+id/relative16"
+            android:layout_below="@id/relative16"
+            android:layout_marginTop="10dp"
+            android:background="#eee"></View>
+
+        <RelativeLayout
+            android:id="@+id/relative17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/relative16"
+            android:layout_alignRight="@+id/relative16"
+            android:layout_below="@+id/view16"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="到期时间" />
+
+            <TextView
+                android:id="@+id/tv_car_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="2000/00/00" />
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

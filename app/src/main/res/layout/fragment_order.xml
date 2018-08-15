@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:paddingTop="15dp"
+        android:paddingBottom="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_suyun"
+                android:text="同城/搬家"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:background="#c31023"
+                android:layout_width="100dp"
+                android:layout_height="35dp" />
+            <Button
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/btn_suyun"
+                android:id="@+id/btn_kuaiyun"
+                android:text="省际/城际"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:background="@drawable/huodi_btn_bg"
+                android:layout_width="100dp"
+                android:layout_height="35dp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/img_huodi_search"
+            android:id="@+id/img_dingdan_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#eee">
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#ffffff"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="40dp"
+            android:paddingTop="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/img1"
+                        android:src="@mipmap/img_pingjia_true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:layout_marginLeft="5dp"
+                        android:src="@mipmap/img_pingjia_true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:id="@+id/img3"
+                        android:layout_marginLeft="5dp"
+                        android:src="@mipmap/img_pingjia_true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:id="@+id/img4"
+                        android:layout_marginLeft="5dp"
+                        android:src="@mipmap/img_pingjia_true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:id="@+id/img5"
+                        android:layout_marginLeft="5dp"
+                        android:src="@mipmap/img_pingjia_true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/tv_time"
+                    android:text="2000/00/00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <View
+                android:layout_marginTop="10dp"
+                android:background="#eee"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+            <TextView
+                android:id="@+id/tv_note"
+                android:text="苏以坐在陈锦对面，   优雅地呷了一口咖啡，微笑着说，谢谢你还记得我。陈锦目不转睛地盯着苏以。错过他恍惚记起他们的大学时代。"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

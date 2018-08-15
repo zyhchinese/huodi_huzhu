@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="main_color">#333333</color>
+    <color name="main_red">#333333</color>
+    <color name="main_bg">#eeeeee</color>
+    <color name="day_layout_bg_normal">#f6f6f6</color>
+    <color name="day_layout_bg_pressed">#dfdfdf</color>
+    <color name="user_info_message_notice">#E35B5A</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black_alpha_240">#f0000000</color>
+    <color name="text_secondary_color">#9d9d9d</color>
+    <color name="account_pressed_true">#14b94d</color>
+    <color name="list_divider_color">#c8c7cc</color>
+    <!-- 下拉刷新时，颜色值 -->
+    <color name="swiperefresh_color1">#ff00ddff</color>
+    <color name="swiperefresh_color2">#ffffbb33</color>
+    <color name="swiperefresh_color3">#ffff4444</color>
+    <color name="swiperefresh_color4">#ffaa66cc</color>
+    <color name="bg_alphr">#60000000</color>
+    <color name="green_light">#ff99cc00</color>
+    <color name="g_default_background">#20000000</color>
+    <color name="disabled_color">#44000000</color>
+    <color name="error_color">#E7492E</color>
+    <array name="g_default_loading_fg">
+        <item>#00bcd4</item>
+        <item>#9c27b0</item>
+        <item>#5677fc</item>
+        <item>#ff9800</item>
+        <item>#e91e63</item>
+    </array>
+
+    <color name="bocop_dialog_bg">#77000000</color>
+    <color name="color_transparent">#00000000</color>
+    <color name="color_e84515">#e84515</color>
+    <color name="color_d8d8d8">#d8d8d8</color>
+    <color name="color_323232">#323232</color>
+
+    <color name="huise">#c9cbcd</color>
+
+    <color name="province_line_border">#D0D0D0</color>
+</resources>

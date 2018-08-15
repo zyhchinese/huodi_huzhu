@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="余额支付"
+        android:textColor="#000000"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        android:background="#eee"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <EditText
+        android:id="@+id/ed_password"
+        android:inputType="textPassword"
+        android:hint="输入支付密码"
+        android:textSize="16sp"
+        android:gravity="end|center_vertical"
+        android:paddingRight="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_button_login_hei"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_queding"
+            android:textColor="#ffffff"
+            android:background="@drawable/anniu_yuanjiao_shape"
+            android:text="确定"
+            android:layout_width="120dp"
+            android:layout_height="40dp" />
+        <Button
+            android:id="@+id/btn_quxiao"
+            android:textColor="#ffffff"
+            android:background="@drawable/anniu_yuanjiao_shape1"
+            android:text="取消"
+            android:layout_alignParentRight="true"
+            android:layout_width="120dp"
+            android:layout_height="40dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

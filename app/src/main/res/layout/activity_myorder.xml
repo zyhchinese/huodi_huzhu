@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    android:orientation="vertical"
+    tools:context="com.lx.hd.ui.activity.PileApplyActivity">
+
+    <include layout="@layout/layout_base_common_title"></include>
+
+    <com.lx.hd.widgets.ColumnHorizontalScrollView
+
+        android:id="@+id/mColumnHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/mRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#dcd9d9"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" />
+    </com.lx.hd.widgets.ColumnHorizontalScrollView>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#FFFFFF"></android.support.v4.view.ViewPager>
+
+
+</LinearLayout>

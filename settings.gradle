@@ -1,0 +1,2 @@
+include ':app', ':paylib', ':sharelib', ':library', ':citypicker_lib'
+project(':citypicker_lib').projectDir = new File('citypicker')

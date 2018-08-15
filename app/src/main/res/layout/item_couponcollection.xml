@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:background="#f5f5f5"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:background="@mipmap/img_huodiyouhuiquan11"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:id="@+id/cheap_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="现金优惠券"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_marginLeft="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/cheap_equal_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textColor="#FFFFFF"
+                    android:textSize="45sp" />
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="45dp"
+                android:id="@+id/cheap_coupon_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前剩余:2张"
+                android:textColor="#eff400"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <View
+            android:visibility="gone"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:background="#FFFFFF" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginRight="20dp"
+                android:layout_gravity="end"
+                android:id="@+id/cheap_descript"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="满10元减1元"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <Button
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:text="立即领取"
+                android:id="@+id/button2"
+                android:background="@drawable/youhuiquan_lijigoumai_shape"
+                android:textColor="#000000"
+                android:textSize="18sp"  />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

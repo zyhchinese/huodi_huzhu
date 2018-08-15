@@ -1,0 +1,40 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">货滴货主</string>
+
+    <string name="main_tabmy_name_primary">首页</string>
+    <string name="main_tab_name_1">货源</string>
+    <string name="main_tab_name_2">订单</string>
+    <string name="main_tab_name_my">我的</string>
+
+    <string name="state_network_error">网络错误</string>
+    <string name="state_loading">正在加载…</string>
+    <string name="state_not_more">没有更多数据</string>
+    <string name="state_load_error">加载失败</string>
+    <string name="state_refreshing">正在刷新</string>
+    <string name="state_loading_error">数据加载中&#8230;</string>
+    <string name="state_submit">正在提交中&#8230;</string>
+
+    <string name="notification_ignore_hint">忽略</string>
+    <string name="notification_retry_hint">重试</string>
+    <string name="content_upload_error_hint">部分内容没有上传成功</string>
+    <string name="event_sign_in_error">签到失败</string>
+    <string name="event_sign_in_success">签到成功</string>
+
+    <!-- Error View -->
+    <string name="error_view_no_data">暂无内容</string>
+    <string name="error_view_loading">加载中…</string>
+    <string name="error_view_loading_friend">数据初始化中…</string>
+    <string name="error_view_loading_local_friend">获取附近的程序员中…</string>
+    <string name="error_view_load_error_click_to_refresh">内容加载失败\r\n点击重新加载</string>
+    <string name="error_view_network_error_click_to_refresh">没有可用的网络</string>
+    <string name="tip_network_error">没有可用的网络</string>
+
+    <string name="unlogin_tip">您还未登录\r\n或网络延迟</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_coupon">CouponActivity</string>
+    <string name="title_activity_balance">BalanceActivity</string>
+    <string name="zl"><u>查看租赁订单</u></string>
+    <string name="sf"><u>查看收费标准</u></string>
+</resources>

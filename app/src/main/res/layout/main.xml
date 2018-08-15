@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" 
+    android:gravity="center_horizontal">
+
+    <EditText android:id="@+id/login_edit_account"
+		android:paddingLeft="45.0sp"
+				android:saveEnabled="true"
+		android:layout_width="150dp"
+				android:layout_height="wrap_content"
+		android:layout_marginLeft="5.0dip"
+				android:layout_marginTop="5.0dip"
+		android:layout_marginRight="5.0dip"
+				android:layout_marginBottom="5.0px"
+		android:hint="账号"
+				android:maxLength="10"
+		android:layout_alignParentTop="true"
+		android:inputType="textCapWords" />
+   <TextView android:textSize="16.0dip"
+	   android:textColor="#ff3f3f3f"
+				android:gravity="center_vertical"
+	   android:id="@+id/TextView01"
+				android:paddingLeft="7.0sp"
+	   android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+	   android:layout_marginRight="15.0sp"
+				android:text="账号:"
+	   android:layout_alignLeft="@+id/login_edit_account"
+				android:layout_alignTop="@+id/login_edit_account"
+				android:layout_alignBottom="@+id/login_edit_account" />
+    <ImageButton android:id="@+id/ImageButton02"
+		android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+		android:layout_marginRight="1.0dip"
+				android:layout_alignTop="@+id/login_edit_account"
+				android:layout_alignRight="@+id/login_edit_account"
+				android:layout_alignBottom="@+id/login_edit_account" />
+
+</RelativeLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.lx.hd.ui.activity.AskLowPriceActivity">
+
+    <include layout="@layout/layout_base_common_title"></include>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="28dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0px"
+        app:cardMaxElevation="2px"
+        app:cardUseCompatPadding="false"
+        app:contentPaddingBottom="-20dp"
+        app:contentPaddingTop="-20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_car_type_temp"
+                    android:layout_marginTop="8dp"
+                    android:text="选择车型"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rly_root_cartype"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toRightOf="@+id/tv_car_type_temp"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rect_gray"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:id="@+id/tv_car_type"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:textSize="13sp"
+                            android:hint="选择您要查询的车型"
+                            android:layout_centerInParent="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="18dp"
+                            android:src="@mipmap/icon_arrow_bottom" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tv_city"
+                    android:text="上牌城市"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/et_city"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toRightOf="@+id/tv_city"
+                    android:background="@drawable/rect_gray"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:textSize="13sp"
+                    android:hint="请填写上牌城市"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#eeeeee"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"></View>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_name"
+                    android:layout_centerVertical="true"
+                    android:text="姓名        "
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/et_name"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toRightOf="@+id/tv_name"
+                    android:background="@drawable/rect_gray"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:textSize="13sp"
+                    android:hint="请填写您的姓名"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_tel_temp"
+                    android:layout_centerVertical="true"
+                    android:text="手机号    "
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toRightOf="@+id/tv_tel_temp"
+                    android:id="@+id/tv_tel"
+                    android:background="@drawable/rect_gray"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:textSize="13sp"
+                    android:hint="请填写您的联系方式"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/shangpinxiangqing_anniu1"
+        android:textColor="@color/white"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:text="提交"
+        android:id="@+id/tv_confirm"/>
+</LinearLayout>

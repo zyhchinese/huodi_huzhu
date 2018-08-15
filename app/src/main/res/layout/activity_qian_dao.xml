@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_base_common_title" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:background="@mipmap/img_huodijifen"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="25dp"
+                    android:text="当前积分："
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/jf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:text="0"
+                    android:textColor="#ff3636"
+                    android:textSize="40dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/btn_qiandao"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/img_jifenqiandao11"
+                        android:drawablePadding="2dp"
+                        android:text="已经连续签到" />
+
+                    <TextView
+                        android:id="@+id/tv_tianshu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:textColor="#ff3636" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="天" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_qiandao"
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/jifenqiandao_anniu_bg"
+                    android:text="立即签到"
+                    android:textColor="#ffffff" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#F8F8F8">
+
+                <ImageView
+                    android:id="@+id/img_jian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:padding="10dp"
+                    android:src="@mipmap/img_jifenqiandao33" />
+
+                <TextView
+                    android:id="@+id/tv_nianyue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/img_jia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:padding="10dp"
+                    android:src="@mipmap/img_jifenqiandao22" />
+
+            </RelativeLayout>
+
+            <!--<com.haibin.calendarview.CalendarView-->
+            <!--android:id="@+id/calendarView"-->
+            <!--app:min_year="1900"-->
+            <!--app:max_year="2100"-->
+            <!--app:month_view_show_mode="mode_fix"-->
+            <!--app:week_start_with="sun"-->
+            <!--app:selected_theme_color="#ff3636"-->
+            <!--app:selected_text_color="#fff5f5"-->
+            <!--app:day_text_size="20sp"-->
+            <!--app:lunar_text_size="1sp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+
+            <!--</com.haibin.calendarview.CalendarView>-->
+
+
+            <com.haibin.calendarview.CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                app:current_day_text_color="#00fdff"
+                app:current_month_lunar_text_color="#CFCFCF"
+                app:current_month_text_color="#333333"
+                app:min_year="2004"
+                app:month_view="com.lx.hd.utils.ColorfulMonthView"
+                app:month_view_show_mode="mode_only_current"
+                app:other_month_text_color="#e1e1e1"
+                app:scheme_lunar_text_color="#ffffff"
+                app:scheme_text="假"
+                app:scheme_text_color="#fff"
+                app:scheme_theme_color="#128c4b"
+                app:selected_lunar_text_color="#fff"
+                app:selected_text_color="#fff"
+                app:selected_theme_color="#F8F8F8"
+                app:week_background="#fff"
+                app:week_text_color="#111"
+                app:week_view="com.lx.hd.utils.ColorfulWeekView"
+                app:year_view_day_text_color="#333333"
+                app:year_view_day_text_size="9sp"
+                app:year_view_month_text_color="#ff0000"
+                app:year_view_month_text_size="20sp"
+                app:year_view_scheme_color="#f17706" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F8F8F8">
+
+                <!--<TextView-->
+                    <!--android:textSize="16sp"-->
+                    <!--android:drawablePadding="2dp"-->
+                    <!--android:drawableLeft="@mipmap/img_jifenqiandao44"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:layout_marginBottom="50dp"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_marginTop="30dp"-->
+                    <!--android:text="签到送积分，连续签到30天送豪礼" />-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/img_jifenqiandao44"
+                        android:drawablePadding="2dp"
+                        android:text="签到送积分，连续签到" />
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:textSize="16sp"
+                        android:id="@+id/tv_tianshu11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:textColor="#ff3636" />
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="天送豪礼" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

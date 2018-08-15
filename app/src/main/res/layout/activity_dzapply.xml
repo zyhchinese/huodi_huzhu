@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee">
+
+    <include layout="@layout/layout_base_title"></include>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/btn_apply"
+        android:id="@+id/act_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+    <Button
+        android:id="@+id/btn_apply"
+        android:text="申请电桩"
+        android:textSize="16sp"
+        android:background="#ffb402"
+        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

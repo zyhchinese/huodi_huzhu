@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@mipmap/img_shibai11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_success"
+            android:text="审核未通过"
+            android:textColor="#282828"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="90dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_success"
+            android:layout_marginTop="10dp"
+            android:text="未通过原因：律解放路附近爱上了房间来访"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_queding"
+            android:text="重新填写"
+            android:textColor="#c30e21"
+            android:background="@drawable/bg_yuanjiao_touming"
+            android:layout_below="@+id/tv1"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

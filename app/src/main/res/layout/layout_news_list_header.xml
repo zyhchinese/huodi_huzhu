@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_marginLeft="13dp"
+    android:layout_marginRight="13dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_news"
+        android:visibility="invisible"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/black_alpha_240"
+        android:text="最新动态"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icom_more"
+        android:id="@+id/img_more"
+        android:visibility="invisible"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"/>
+</RelativeLayout>

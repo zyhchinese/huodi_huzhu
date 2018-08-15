@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lx.hd">
+
+    <permission
+        android:name="com.lx.hd.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="com.lx.hd.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- 极光推送 -->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 定位 -->
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 该权限用于获取手机相机使用闪光灯权限，比如二维码扫描需打开闪光灯 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <!-- 该特性group用于访问系统硬件相机与相机自动对焦功能，比如发布照片动弹，扫描二维码时需要 -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name=".PilesApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.activity.LaunchActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Websocket Service -->
+        <service android:name=".webscket.WebSocketClientService" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.lx.hd.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- 汽车列表详情 -->
+        <activity
+            android:name=".ui.activity.CarHome_XQActivity"
+            android:screenOrientation="portrait" />
+        <!-- 登录 -->
+        <activity
+            android:name=".account.LoginActivity"
+            android:screenOrientation="portrait" />
+        <!-- 注册页面1 -->
+        <activity
+            android:name=".account.RegisterOneActivity"
+            android:screenOrientation="portrait" />
+        <!-- 注册页面2 -->
+        <activity
+            android:name=".account.RegisterTwoActivity"
+            android:screenOrientation="portrait" />
+        <!-- 设置页面 -->
+        <activity
+            android:name=".ui.activity.SetupActivity"
+            android:screenOrientation="portrait" />
+        <!-- 我的钱包（已弃用） -->
+        <activity
+            android:name=".ui.activity.WalletActivity"
+            android:screenOrientation="portrait" />
+        <!-- 我的钱包余额 -->
+        <activity
+            android:name=".ui.activity.MywalletActivity"
+            android:screenOrientation="portrait" />
+        <!-- 我的优惠券 -->
+        <activity
+            android:name=".ui.activity.CouponActivity"
+            android:screenOrientation="portrait" />
+        <!-- 充值订单 -->
+        <activity
+            android:name=".ui.activity.ChargeOrderActivity"
+            android:screenOrientation="portrait" />
+        <!-- 余额 -->
+        <activity
+            android:name=".ui.activity.BalanceActivity"
+            android:screenOrientation="portrait" />
+        <!-- 新闻和轮播图详情 -->
+        <activity
+            android:name=".ui.activity.BannerActivity"
+            android:screenOrientation="portrait" />
+        <!-- 积分 -->
+        <activity
+            android:name=".ui.activity.IntegralActivity"
+            android:screenOrientation="portrait" />
+        <!-- 个人信息 -->
+        <activity
+            android:name=".ui.activity.PersonalInformationActivity"
+            android:screenOrientation="portrait" />
+        <!-- 明细 -->
+        <activity
+            android:name=".ui.activity.CustomerPositionActivity"
+            android:screenOrientation="portrait" />
+        <!-- 商城 -->
+        <activity
+            android:name=".ui.activity.ShopActivity"
+            android:screenOrientation="portrait" />
+        <!-- 充电中 -->
+
+        <activity
+            android:name=".ui.activity.ChargeViewActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait" />
+        <!-- 关于我们 -->
+        <activity
+            android:name=".ui.activity.AboutActivity"
+            android:screenOrientation="portrait" />
+        <!-- 安全中心 -->
+        <activity
+            android:name=".ui.activity.SecurityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lzy.imagepicker.ui.ImagePreviewDelActivity"
+            android:theme="@style/ImagePickerThemeFullScreen" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="20d8f6825e084a63c436304bcaaf5aae" />
+        <!-- 定位需要的服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+        <service
+            android:name=".update.DownloadService"
+            android:exported="false" />
+
+        <activity
+            android:name=".account.ForgetPwdTwoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".account.ForgetPwdOneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.PileApplyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyCarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.BindEmailActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SetEncryptedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.OrderDetialActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".account.ModifyPwdActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CarLeaseActivity"
+            android:screenOrientation="portrait" />
+        <!-- 充电方式 -->
+        <activity
+            android:name=".ui.activity.PayMethodActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.PayActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CarHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CarHomeBackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.NewsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.NewsDetialActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".update.UpdateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Dialog.NoTitle.Translucent" />
+        <activity
+            android:name=".update.NoUpdateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Dialog.NoTitle.Translucent" />
+        <activity
+            android:name=".ui.activity.WithDrawalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SetPayPwdActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ChargeMethodActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Dialog.NoTitle.Translucent" />
+
+        <service android:name=".webscket.WebSocketClientService" />
+
+        <activity
+            android:name=".ui.activity.FeedBackActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".ui.activity.BindQWActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name=".ui.activity.NewFeatureIntroduceActivity" />
+        <activity android:name=".ui.activity.CommonQuestionActivity" />
+        <activity android:name=".ui.activity.LikeMbtActivity" />
+        <activity android:name=".ui.activity.SearchActivity" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 通过AndroidManifest配置AppKey和AppSecret，如果你选择通过代码配置，则不需要配置以下meta-data -->
+        <meta-data
+            android:name="Mob-AppKey"
+            android:value="2066b30c1e9fa" />
+        <meta-data
+            android:name="Mob-AppSecret"
+            android:value="f8f46ffe0248ea9246af6422ecb849af" />
+
+        <activity android:name=".ui.activity.ScannerActivity" />
+        <activity android:name=".mvp.CarDetialActivity" />
+        <activity android:name=".ui.activity.AskLowPriceActivity" />
+        <!-- ......................................................................................................... -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent1106357013" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <!-- 集成line客户端登录授权，需要添如下格式的过滤器 -->
+            <intent-filter>
+                <data android:scheme="line.1477692153" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.TiXianStoryActivity" />
+        <activity android:name=".test.TestActivity" />
+        <activity android:name=".ui.activity.AskOrAnswerActivity" />
+        <activity android:name=".ui.activity.GoodsDetialActivity" />
+        <activity android:name=".ui.activity.ConfirmOrderActivity" />
+        <activity android:name=".ui.activity.ShoppingCartActivity" />
+        <activity android:name=".ui.activity.OrderDetailsActivity" />
+        <activity android:name=".ui.activity.AddressActivity" />
+        <activity android:name=".ui.activity.EditAddressActivity" />
+        <activity android:name=".ui.activity.UpdateAddressActivity" />
+        <activity android:name=".ui.activity.MyReservationActivity" />
+        <activity android:name=".ui.activity.BannerDetailsActivity" />
+
+        <!-- 活动列表 -->
+        <activity android:name=".ui.activity.ActiveListActivity" />
+        <!-- 圈子 -->
+        <activity
+            android:name=".ui.activity.QZActivity"
+            android:process=":h5"
+            android:screenOrientation="portrait" />
+        <!-- 活动详情 -->
+        <activity android:name=".ui.activity.ActivedetailsActivity" />
+        <!-- 商品列表 -->
+        <activity android:name=".ui.activity.ShoppingActivity" />
+        <!-- 我的订单 -->
+        <activity android:name=".ui.activity.myOrderActivity" />
+        <!-- 订单中心 -->
+        <activity android:name=".ui.activity.OrderCenterActivity" />
+        <activity android:name=".ui.activity.DZapplyActivity" />
+        <activity android:name=".ui.activity.ApplyInfoActivity" />
+        <activity android:name=".ui.activity.MyCar1Activity" />
+        <activity android:name=".ui.activity.CarInfoActivity" />
+        <!-- 领取优惠券 -->
+        <activity android:name=".ui.activity.CouponCollectionActivity" />
+        <activity android:name=".ui.activity.OrderActivity" />
+        <activity android:name=".ui.activity.ShowImgActivity" />
+        <activity android:name=".ui.activity.ProvinceActivity" />
+        <activity android:name=".ui.activity.CityActivity" />
+        <!-- 车辆租赁 -->
+        <activity android:name=".ui.activity.CarrenTalActivity" />
+        <activity android:name=".ui.activity.CarrenTal2Activity" />
+        <activity android:name=".ui.activity.CarrenTal3Activity" />
+        <!-- 扫码结果 -->
+        <activity android:name=".ui.activity.SysTextActivity" />
+        <!-- 物流找货 -->
+        <activity
+            android:name=".ui.activity.DeliverGoodsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 选择位置 -->
+        <activity
+            android:name=".ui.activity.DeliverMapActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize|adjustPan" />
+        <!-- 额外需求 -->
+        <activity
+            android:name=".ui.activity.AdditionalDemandActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 确认物流订单 -->
+        <activity
+            android:name=".ui.activity.LogisticsConfirmationOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.DeliverPriceDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.ChargeStandardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.LogisticsAgreementActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.zaaach.citypicker.CityPickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CityPicker.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 速运 -->
+        <activity
+            android:name=".ui.activity.HuoDSuyunActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 快运 -->
+        <activity
+            android:name=".ui.activity.HuoDKuaiyunActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 极光推送 -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="0f6e603d6e58214411a3e2d5" />
+
+        <!-- &lt;!&ndash; 可配置android:process参数将PushService放在其他进程中 &ndash;&gt; -->
+        <!-- <service -->
+        <!-- android:name="cn.jpush.android.service.PushService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="false"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="cn.jpush.android.intent.REGISTER" /> -->
+        <!-- <action android:name="cn.jpush.android.intent.REPORT" /> -->
+        <!-- <action android:name="cn.jpush.android.intent.PushService" /> -->
+        <!-- <action android:name="cn.jpush.android.intent.PUSH_TIME" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+
+
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:exported="false"
+            android:process=":mult">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- &lt;!&ndash; since 3.0.9 Required SDK 核心功能 &ndash;&gt; -->
+        <!-- <provider -->
+        <!-- android:name="cn.jpush.android.service.DataProvider" -->
+        <!-- android:authorities="com.lx.hd.DataProvider" -->
+        <!-- android:exported="true" /> -->
+
+
+        <!-- since 3.0.9 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DataProvider"
+            android:authorities="com.lx.hd.DataProvider"
+            android:exported="false" />
+
+        <!-- &lt;!&ndash; since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 &ndash;&gt; -->
+        <!-- &lt;!&ndash; 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 &ndash;&gt; -->
+        <!-- <service -->
+        <!-- android:name="cn.jpush.android.service.DaemonService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="cn.jpush.android.intent.DaemonService" /> -->
+
+
+        <!-- <category android:name="com.lx.hd" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.lx.hd" />
+            </intent-filter>
+        </service>
+
+        <!-- &lt;!&ndash; since 3.1.0 Required SDK 核心功能 &ndash;&gt; -->
+        <!-- <provider -->
+        <!-- android:name="cn.jpush.android.service.DownloadProvider" -->
+        <!-- android:authorities="com.lx.hd.DownloadProvider" -->
+        <!-- android:exported="true" /> -->
+
+
+        <!-- since 3.1.0 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DownloadProvider"
+            android:authorities="com.lx.hd.DownloadProvider"
+            android:exported="true" />
+
+        <!-- &lt;!&ndash; Required SDK核心功能 &ndash;&gt; -->
+        <!-- <receiver -->
+        <!-- android:name="cn.jpush.android.service.PushReceiver" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="false"> -->
+        <!-- <intent-filter android:priority="1000"> -->
+        <!-- <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> &lt;!&ndash; Required  显示通知栏 &ndash;&gt; -->
+        <!-- <category android:name="com.lx.hd" /> -->
+        <!-- </intent-filter> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.USER_PRESENT" /> -->
+        <!-- <action android:name="android.net.conn.CONNECTIVITY_CHANGE" /> -->
+        <!-- </intent-filter> -->
+        <!-- &lt;!&ndash; Optional &ndash;&gt; -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.PACKAGE_ADDED" /> -->
+        <!-- <action android:name="android.intent.action.PACKAGE_REMOVED" /> -->
+
+
+        <!-- <data android:scheme="package" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
+                <category android:name="com.lx.hd" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- &lt;!&ndash; Required SDK核心功能 &ndash;&gt; -->
+        <!-- <receiver -->
+        <!-- android:name="cn.jpush.android.service.AlarmReceiver" -->
+        <!-- android:exported="false" /> -->
+
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+
+        <!-- &lt;!&ndash; Required SDK核心功能 &ndash;&gt; -->
+        <!-- <activity -->
+        <!-- android:name="cn.jpush.android.ui.PushActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden" -->
+        <!-- android:exported="false" -->
+        <!-- android:theme="@android:style/Theme.NoTitleBar"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="cn.jpush.android.ui.PushActivity" /> -->
+
+
+        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+        <!-- <category android:name="com.lx.hd" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+
+
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.lx.hd" />
+            </intent-filter>
+        </activity>
+
+        <!-- &lt;!&ndash; SDK核心功能 &ndash;&gt; -->
+        <!-- <activity -->
+        <!-- android:name="cn.jpush.android.ui.PopWinActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden" -->
+        <!-- android:exported="false" -->
+        <!-- android:theme="@android:style/Theme.NoTitleBar"> -->
+        <!-- <intent-filter> -->
+        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+        <!-- <category android:name="com.lx.hd" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+
+
+        <!-- Rich push 核心功能 since 2.0.6 -->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle" />
+
+        <!-- Required SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- Required since 3.0.7 -->
+        <!-- 新的tag/alias接口结果返回需要开发者配置一个自定的广播 -->
+        <!-- 该广播需要继承JPush提供的JPushMessageReceiver类, 并如下新增一个 Intent-Filter -->
+        <receiver
+            android:name=".receiver.MyJPushMessageReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
+                <category android:name="com.lx.hd" />
+            </intent-filter>
+        </receiver>
+
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name=".receiver.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.lx.hd" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".ui.activity.EtcActivity" />
+        <activity android:name=".ui.activity.AuditStatusActivity" />
+        <activity android:name=".ui.activity.OrderSearchActivity" />
+        <activity android:name=".ui.activity.AuditDetailsActivity" />
+        <activity android:name=".ui.activity.CarAudit1Activity" />
+        <activity android:name=".ui.activity.CarInfoDetailsActivity" />
+        <activity android:name=".ui.activity.LogisticsOrderActivity" />
+        <activity android:name=".ui.activity.LogisticsOrderDetailsActivity" />
+        <activity android:name=".ui.activity.LogisticsOrderDetailsActivitys" />
+        <activity android:name=".ui.activity.LogisticsOrderDetailsActivity1" />
+        <activity android:name=".ui.activity.LogisticsOrderDetailsActivity1s" />
+        <activity android:name=".ui.activity.LogisticsOrderDetailsActivity2" />
+        <activity android:name=".ui.activity.LogisticsOrderDetailsActivity2s" />
+        <activity android:name=".ui.activity.DriverCertificationActivity" />
+        <activity android:name=".ui.activity.FahuoOrderActivity" />
+        <activity android:name=".ui.activity.JiHuoOrderActivity" />
+        <activity android:name=".ui.activity.OrderSearchsActivity" />
+        <activity android:name=".ui.activity.DriverCertificationStateActivity" />
+        <activity android:name=".ui.activity.DriverZhaoHuoActivity" />
+        <activity android:name=".ui.activity.DriverZhaoHuoDetailsActivity" />
+        <activity android:name=".ui.activity.LogisticsOrderJieHuoDetailsActivity" />
+        <activity android:name=".ui.activity.SiJiPingJiaActivity" />
+        <activity android:name=".ui.activity.SearchResultActivity" />
+        <activity android:name=".ui.activity.KaiJuFaPiaoActivity" />
+        <activity android:name=".ui.activity.KaiPiaoActivity" />
+        <activity android:name=".ui.activity.KaiPiaoActivity1Activity" />
+        <activity android:name=".ui.activity.KaiPiaoLiShiActivity" />
+        <activity android:name=".ui.activity.SuYunShouFeiActivity" />
+        <!-- 支付成功 -->
+        <activity android:name=".ui.activity.DingDanZhiFuChengGongActivity" />
+        <activity android:name=".ui.activity.QianYueJieSuanActivity" />
+        <activity android:name=".ui.activity.XianZaiActivity" />
+        <activity android:name=".ui.activity.MoRenQiDianAddressActivity" />
+        <activity android:name=".ui.activity.MoRenQiDianAddressActivity1" />
+        <activity android:name=".ui.activity.MoRenLianXiRenActivity" />
+        <activity android:name=".ui.activity.LiShiXiaoXiActivity" />
+        <activity android:name=".ui.activity.LiShiXiaoXiDetailActivity" />
+        <activity android:name=".ui.activity.ChangJianWenTiActivity" />
+        <activity android:name=".ui.activity.ChangJianWenTiDetailActivity" />
+        <activity
+            android:name=".ui.activity.ShangChengActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.ShangPinFenLeiActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.ShangPinFenLei11Activity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".ui.activity.DriverFriendActivity" />
+        <activity android:name=".ui.activity.YongHuZhiNanActivity" />
+        <activity android:name=".ui.activity.KuaiYun_XiangQingActivity" />
+        <activity android:name=".ui.activity.ErShouCheShouYeActivity" />
+        <activity android:name=".ui.activity.ErShouCheShouYeXiangQingActivity" />
+        <activity android:name=".ui.activity.WoDeErShouCheActivity" />
+        <activity
+            android:name=".ui.activity.FaBuErShouCheActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".ui.activity.WoDeErShouCheLieBiaoActivity" />
+        <activity android:name=".ui.activity.QianDaoActivity"></activity>
+    </application>
+
+</manifest>

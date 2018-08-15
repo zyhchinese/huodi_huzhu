@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@mipmap/img_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_success"
+            android:text="提交成功"
+            android:textColor="#282828"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_success"
+            android:layout_marginTop="100dp"
+            android:text="请等待审核"
+            android:textColor="#282828"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_queding"
+            android:text="确认"
+            android:textColor="#c30e21"
+            android:background="@drawable/bg_yuanjiao_touming"
+            android:layout_below="@+id/tv1"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

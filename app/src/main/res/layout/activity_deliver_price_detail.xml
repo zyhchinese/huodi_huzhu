@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.lx.hd.ui.activity.PileApplyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_base_title_deliverprice"></include>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@mipmap/xhc" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="15dp"
+                        android:background="#EEE" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="3dp"
+                            android:text="¥"
+                            android:textColor="#000000"
+                            android:textSize="24dp" />
+
+                        <TextView
+                            android:id="@+id/jg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="50"
+                            android:textColor="#000000"
+                            android:textSize="40dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/zlc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#000000"
+                        android:text="总里程2公里" />
+
+                    <TextView
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:lineSpacingExtra="5dp"
+                        android:text="若产生高速费、停车费和搬运费，请用户额外支付；若涉及逾期等候费，请与司机按收费标准结算"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/qbj"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="25dp"
+                        android:background="@drawable/bg_textview_price_hui"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="35dp"
+                        android:paddingRight="35dp"
+                        android:paddingTop="20dp"
+                        android:text="小货车起步价：¥50"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/sfbz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:text="@string/sf"
+                        android:textColor="#c30e21" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

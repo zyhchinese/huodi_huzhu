@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="#ffffff"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/sp1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="7dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape_button_login_hei11"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/shopimg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/item_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="0dp"
+            android:drawableLeft="@mipmap/icon_red"
+            android:drawablePadding="5dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:textColor="#333333"
+            android:textSize="13dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_marginTop="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/dw1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="¥"
+                android:textColor="#c72335"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/jg1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="1000"
+                android:textColor="#c72335"
+                android:textSize="13dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sp2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="7dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape_button_login_hei11"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/shopimg2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/item_tx2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="0dp"
+            android:drawableLeft="@mipmap/icon_red"
+            android:drawablePadding="5dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:textColor="#333333"
+            android:textSize="13dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_marginTop="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/dw2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="¥"
+                android:textColor="#c72335"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/jg2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="1000"
+                android:textColor="#c72335"
+                android:textSize="13dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

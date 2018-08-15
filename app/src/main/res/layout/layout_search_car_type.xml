@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#eeeeee"
+    >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rect_gray"
+        android:layout_weight="1"
+        android:id="@+id/et_search"
+        android:textSize="14sp"
+        android:padding="5dp"
+        android:hint="搜索"/>
+
+</LinearLayout>

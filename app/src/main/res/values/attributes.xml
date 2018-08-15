@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomAttributes">
+
+        <!-- indicate if the slider must show number indicator -->
+        <attr name="showNumberIndicator" format="boolean" />
+        <!-- in progress view indicate max value of progress -->
+        <attr name="max" format="integer" />
+        <!-- in progress view indicate min value of progress -->
+        <attr name="min" format="integer" />
+        <!-- in progress view indicate value of progress -->
+        <attr name="value" format="integer" />
+        <!-- in progress view indicate value of progress -->
+        <attr name="progress" format="integer" />
+        <!-- in switche's view indicate state of view -->
+        <attr name="check" format="boolean" />
+        <!-- in float button indicate icon resource -->
+        <attr name="iconFloat" format="integer" />
+        <!-- in float button indicate if must start with animation -->
+        <attr name="animate" format="boolean" />
+    </declare-styleable>
+
+    <!-- 下面是MaterialEditText的 -->
+    <declare-styleable name="MaterialEditText">
+
+        <!-- The base color of the line and the texts. Default is black. -->
+        <attr name="baseColor" format="color" />
+        <!-- The highlight color of the line, and the floating label if the highlightFloatingLabel is true. -->
+        <attr name="primaryColor" format="color" />
+        <!-- How the floating label should be shown. Default is none -->
+        <attr name="floatingLabel">
+            <enum name="none" value="0" />
+            <enum name="normal" value="1" />
+            <enum name="highlight" value="2" />
+        </attr>
+        <!-- The color for when something is wrong.(e.g. exceeding max characters) -->
+        <attr name="errorColor" format="color" />
+        <!-- Characters count limit. 0 means no limit. -->
+        <attr name="maxCharacters" format="integer" />
+        <!-- Whether to show the bottom ellipsis in singleLine mode -->
+        <attr name="singleLineEllipsis" format="boolean" />
+        <!-- Reserved bottom text lines count, no matter if there is some helper/error text. -->
+        <attr name="minBottomTextLines" format="integer" />
+        <!-- Helper text at the bottom -->
+        <attr name="helperText" format="string" />
+        <!-- Font of the paint used to draw accent texts -->
+        <attr name="accentTypeface" format="string" />
+        <!-- Custom float label text -->
+        <attr name="floatingLabelText" format="string" />
+        <!-- Hide underline -->
+        <attr name="hideUnderline" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ZrcAbsListView">
+
+        <!-- Drawable used to indicate the currently selected item in the list. -->
+        <attr name="android:listSelector" />
+        <!--
+             When set to true, the selector will be drawn over the selected item.
+             Otherwise the selector is drawn behind the selected item. The default
+             value is false.
+        -->
+        <attr name="android:drawSelectorOnTop" />
+        <!-- Used by ListView and GridView to stack their content from the bottom. -->
+        <attr name="android:stackFromBottom" />
+        <!--
+             When set to true, the list uses a drawing cache during scrolling.
+             This makes the rendering faster but uses more memory. The default
+             value is true.
+        -->
+        <attr name="android:scrollingCache" />
+        <!--
+             Sets the transcript mode for the list. In transcript mode, the list
+             scrolls to the bottom to make new items visible when they are added.
+        -->
+        <attr name="android:transcriptMode" />
+        <!--
+             Indicates that this list will always be drawn on top of solid, single-color
+             opaque background. This allows the list to optimize drawing.
+        -->
+        <attr name="android:cacheColorHint" />
+        <!--
+             When set to true, the list will use a more refined calculation
+             method based on the pixels height of the items visible on screen. This
+             property is set to true by default but should be set to false if your adapter
+             will display items of varying heights. When this property is set to true and
+             your adapter displays items of varying heights, the scrollbar thumb will
+             change size as the user scrolls through the list. When set to fale, the list
+             will use only the number of items in the adapter and the number of items visible
+             on screen to determine the scrollbar's properties.
+        -->
+        <attr name="android:smoothScrollbar" />
+        <!--
+             Defines the choice behavior for the view. By default, lists do not have
+             any choice behavior. By setting the choiceMode to singleChoice, the list
+             allows up to one item to be in a chosen state. By setting the choiceMode to
+             multipleChoice, the list allows any number of items to be chosen.
+             Finally, by setting the choiceMode to multipleChoiceModal the list allows
+             any number of items to be chosen in a special selection mode.
+             The application will supply a
+             {@link android.widget.AbsListView.MultiChoiceModeListener} using
+             {@link android.widget.AbsListView#setMultiChoiceModeListener} to control the
+             selection mode. This uses the {@link android.view.ActionMode} API.
+        -->
+        <attr name="android:choiceMode" />
+    </declare-styleable>
+    <declare-styleable name="ListView">
+
+        <!--
+             Reference to an array resource that will populate the ListView.  For static content,
+             this is simpler than populating the ListView programmatically.
+        -->
+        <attr name="android:entries" />
+        <!-- Drawable or color to draw between list items. -->
+        <attr name="android:divider" />
+        <!--
+             Height of the divider. Will use the intrinsic height of the divider if this
+             is not specified.
+        -->
+        <attr name="android:dividerHeight" />
+        <!--
+             When set to false, the ListView will not draw the divider after each header view.
+             The default value is true.
+        -->
+        <attr name="android:headerDividersEnabled" />
+        <!--
+             When set to false, the ListView will not draw the divider before each footer view.
+             The default value is true.
+        -->
+        <attr name="android:footerDividersEnabled" />
+        <!-- Drawable to draw above list content. -->
+        <attr name="android:overScrollHeader" />
+        <!-- Drawable to draw below list content. -->
+        <attr name="android:overScrollFooter" />
+    </declare-styleable>
+
+    <!-- PaperButton Attribute -->
+    <declare-styleable name="PaperButton">
+        <attr name="paper_text" format="string" />
+        <attr name="paper_text_size" format="dimension" />
+        <attr name="paper_text_color" format="color" />
+        <attr name="paper_font" format="string" />
+        <attr name="paper_color" format="color" />
+        <attr name="paper_corner_radius" format="dimension" />
+        <attr name="paper_shadow_radius" format="float" />
+        <attr name="paper_shadow_offset_x" format="float" />
+        <attr name="paper_shadow_offset_y" format="float" />
+        <attr name="paper_shadow_color" format="color" />
+    </declare-styleable>
+
+</resources>

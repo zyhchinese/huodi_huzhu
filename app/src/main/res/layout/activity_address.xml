@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee">
+
+    <include layout="@layout/layout_base_common_title"
+        ></include>
+
+
+    <ScrollView
+        android:background="#eeeeee"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/act_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <RelativeLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_radiobutton_tu"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+                <ImageView
+                    android:id="@+id/img_add"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/img_bcak"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

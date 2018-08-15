@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee">
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/img_datu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="预约试驾"
+                    android:textSize="18sp"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="200dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@mipmap/img_changtiao"
+                    android:id="@+id/btn_yuyue"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@mipmap/img_close1"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <android.support.v7.widget.RecyclerView
+                    android:layout_below="@+id/img1"
+                    android:id="@+id/act_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+                <WebView
+                    android:id="@+id/tv_note"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/act_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:layout_below="@+id/tv_note"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/btn_top"
+                    android:text="返回顶部预约试驾"
+                    android:paddingTop="30dp"
+                    android:textColor="#7e7e7e"
+                    android:drawableTop="@mipmap/img_back_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" />
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

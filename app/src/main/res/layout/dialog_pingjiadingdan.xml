@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp"
+    android:background="@drawable/shape_bg_yuanjiao"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/img1"
+                android:src="@mipmap/img_pingjia_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/img_pingjia_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/img_pingjia_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/img_pingjia_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/img_pingjia_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:orientation="horizontal"
+            android:layout_width="280dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="150dp">
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/tagFlow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                zhy:max_select="-1">
+
+            </com.zhy.view.flowlayout.TagFlowLayout>
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_marginTop="10dp"
+            android:background="#d4d4d4"
+            android:layout_width="280dp"
+            android:layout_height="1dp"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_bg_pingjia"
+            android:orientation="vertical"
+            android:layout_width="260dp"
+            android:layout_height="70dp">
+            <EditText
+                android:id="@+id/ed_content"
+                android:textSize="16sp"
+                android:hint="评价内容"
+                android:background="@null"
+                android:layout_width="240dp"
+                android:layout_height="60dp" />
+
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="260dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_tijiao"
+                android:layout_marginTop="20dp"
+                android:text="提交"
+                android:textColor="#ffffff"
+                android:background="@drawable/shape_pingjia_tijiao"
+                android:layout_width="110dp"
+                android:layout_height="25dp" />
+
+            <Button
+                android:layout_alignParentRight="true"
+                android:id="@+id/btn_quxiao"
+                android:layout_marginTop="20dp"
+                android:text="取消"
+                android:textColor="#c31023"
+                android:background="@drawable/shape_pingjia_tijiao_fuben"
+                android:layout_width="110dp"
+                android:layout_height="25dp" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</android.support.v7.widget.CardView>

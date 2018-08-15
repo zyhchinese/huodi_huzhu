@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="20dp"
+    android:background="#ffffff"
+    android:layout_marginBottom="10dp">
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:textColor="#514545"
+        android:text="废旧塑料会计分录废旧塑料开放经济法可莱丝分解落实解放路看"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:background="#eee"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <RelativeLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/checkbox_moren"
+            android:textSize="16sp"
+            android:textColor="#978d8d"
+            android:paddingLeft="10dp"
+            android:text="默认地址"
+            android:button="@mipmap/img_huodiaddresst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:drawablePadding="8dp"
+            android:drawableLeft="@mipmap/img_huodishanchulaji"
+            android:textSize="16sp"
+            android:textColor="#978d8d"
+            android:text="删除"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</LinearLayout>

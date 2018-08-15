@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_base_common_title"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_charge_root">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_alpha_240"
+                        android:text="开始日期"
+                        android:textSize="16sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:id="@+id/tv_time_begin"
+                        android:layout_gravity="center_vertical"
+                        android:textColorHint="@color/black_alpha_240"
+                        android:textSize="15sp"
+                        android:textColor="@color/black_alpha_240"
+                        android:gravity="center"
+                        android:paddingRight="10dp"
+                        android:background="@drawable/rect_gray"
+                        android:hint="日期选择"/>
+                </LinearLayout>
+
+                <View
+                    style="@style/h_line"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_alpha_240"
+                        android:text="结束日期"
+                        android:textSize="16sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:id="@+id/tv_time_finish"
+                        android:layout_gravity="center_vertical"
+                        android:textColorHint="@color/black_alpha_240"
+                        android:textSize="15sp"
+                        android:textColor="@color/black_alpha_240"
+                        android:gravity="center"
+                        android:paddingRight="10dp"
+                        android:background="@drawable/rect_gray"
+                        android:hint="日期选择"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/bg_yellow_round_corners"
+                android:textColor="@color/white"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:text="搜索"
+                android:id="@+id/tv_confirm"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

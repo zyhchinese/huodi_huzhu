@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/bg_radiobutton_bg"
+    android:paddingBottom="15dp"
+    android:paddingRight="15dp">
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/img_touxiang" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/img1"
+        android:layout_marginLeft="10dp"
+        android:textColor="#000000"
+        android:layout_toRightOf="@+id/img1"
+        android:text="段一鑫" />
+
+    <ImageView
+        android:id="@+id/img_write"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/img1"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/img_write" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/img_write"
+        android:layout_marginTop="10dp"
+        android:background="#eee" />
+
+    <ImageView
+        android:id="@+id/img_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/img1"
+        android:layout_below="@+id/view"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/img_address" />
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/img_address"
+        android:layout_marginLeft="10dp"
+        android:textColor="#000000"
+        android:layout_toRightOf="@+id/img_address"
+        android:text="山东省济南市历下区汉峪金谷" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/img_address"
+        android:layout_marginTop="10dp"
+        android:background="#eee" />
+
+    <ImageView
+        android:id="@+id/img_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/img_address"
+        android:layout_below="@+id/view1"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/img_phone" />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:layout_alignBottom="@+id/img_phone"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/img_phone"
+        android:text="15002348965" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/img_phone"
+        android:layout_marginTop="10dp"
+        android:background="#eee" />
+
+
+    <CheckBox
+        android:id="@+id/checkbox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view2"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/tv_moren"
+        app:buttonTint="@drawable/selector_anniu" />
+
+
+    <TextView
+        android:id="@+id/tv_moren"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_phone"
+        android:layout_below="@+id/view2"
+        android:textColor="#000000"
+        android:layout_marginTop="20dp"
+        android:text="默认地址" />
+
+    <RadioButton
+        android:id="@+id/rb1"
+        android:button="@null"
+        android:drawableLeft="@drawable/selector_anniu1"
+        android:layout_alignBottom="@+id/tv_moren"
+        android:layout_toRightOf="@+id/tv_moren"
+        android:layout_marginLeft="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_now_address"
+        android:text="选择当前地址"
+        android:layout_marginLeft="3dp"
+        android:textColor="#000000"
+        android:layout_alignBottom="@+id/tv_moren"
+        android:layout_toRightOf="@+id/rb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/img_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_moren"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/gwc_delete" />
+
+
+</RelativeLayout>

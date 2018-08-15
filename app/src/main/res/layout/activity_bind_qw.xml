@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_base_common_title"></include>
+
+    <ScrollView
+        android:background="#ffffff"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_charge_root">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_alpha_240"
+                        android:text="QQ"
+                        android:textSize="18sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp" />
+                    <EditText
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:inputType="number"
+                        android:id="@+id/et_qq"
+                        android:layout_gravity="center_vertical"
+                        android:textColorHint="#686565"
+                        android:textSize="15sp"
+                        android:textColor="#686565"
+                        android:gravity="center"
+                        android:background="@drawable/shape_button_login_hei11"
+                        android:hint="请输入您的QQ号码"/>
+                </LinearLayout>
+
+                <!--<View-->
+                    <!--style="@style/h_line"-->
+                    <!--android:layout_marginTop="20dp"-->
+                    <!--android:layout_marginBottom="20dp"></View>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_alpha_240"
+                        android:text="微信"
+                        android:textSize="18sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:id="@+id/et_wx"
+                        android:layout_gravity="center_vertical"
+                        android:textColorHint="#686565"
+                        android:textSize="15sp"
+                        android:textColor="#686565"
+                        android:gravity="center"
+                        android:paddingRight="10dp"
+                        android:background="@drawable/shape_button_login_hei11"
+                        android:hint="请输入您的微信号码"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#ca1827"
+                android:textColor="#ffffff"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="25dp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:text="完成"
+                android:id="@+id/tv_confirm"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

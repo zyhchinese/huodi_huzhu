@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#15000000"
+    android:orientation="vertical"
+    android:id="@+id/fl_root"
+    tools:ignore="HardcodedText">
+
+    <FrameLayout
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="@dimen/lay_20"
+        android:layout_marginRight="@dimen/lay_20"
+        tools:ignore="UselessParent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/lay_16"
+            android:paddingRight="@dimen/lay_16">
+
+            <LinearLayout
+                android:id="@+id/ll_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="检查更新"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/icon_no_update_title" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/icon_no_update_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/lay_16"
+                        android:text="当前已是最新版本"
+                        android:textColor="#111111"
+                        android:textSize="@dimen/font_20" />
+
+                    <TextView
+                        android:id="@+id/tv_update_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/lay_16"
+                        android:layout_marginRight="@dimen/lay_16"
+                        android:lineSpacingExtra="4dp"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/font_16"
+                        android:text="当前版本号：1.0.0 \n更新时间 2017.09.21" />
+
+                    <Button
+                        android:id="@+id/btn_update"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:visibility="invisible"
+                        android:layout_height="40dp"
+                        android:layout_margin="@dimen/lay_16"
+                        android:background="@mipmap/bg_update_confim"
+                        android:text="立即升级"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="检查更新"
+                android:src="@mipmap/roket_update" />
+        </FrameLayout>
+
+        <ImageButton
+            android:contentDescription="检查更新"
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="26dp"
+            android:background="@color/transparent"
+            android:src="@mipmap/ic_close" />
+    </FrameLayout>
+</FrameLayout>

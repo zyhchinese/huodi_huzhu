@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#f5f5f5">
+
+    <include layout="@layout/layout_base_common_title"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                app:image_scale_type="fit_xy"
+                app:indicator_height="8dp"
+                app:indicator_margin="5dp"
+                app:indicator_width="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+            </com.youth.banner.Banner>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:background="#ffffff"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/wode_ershouche"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/img1"
+                        android:layout_marginLeft="15dp"
+                        android:src="@mipmap/img_huodiwodeershouche"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/img1"
+                        android:text="我的二手车"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/img_hongjiantou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <View
+                    android:background="#eeeeee"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/fabu_ershouche"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/img2"
+                        android:layout_marginLeft="15dp"
+                        android:src="@mipmap/img_huodifabuershouche"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/img2"
+                        android:text="发布二手车"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/img_hongjiantou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <View
+                    android:background="#eeeeee"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+            </LinearLayout>
+            
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

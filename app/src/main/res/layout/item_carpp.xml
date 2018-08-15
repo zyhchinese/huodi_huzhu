@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+<TextView
+    android:layout_width="match_parent"
+    android:id="@+id/tv_index"
+    android:text="A"
+    android:textSize="15dp"
+    android:layout_margin="5dp"
+    android:paddingLeft="20dp"
+    android:textColor="#454545"
+    android:layout_height="wrap_content" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:id="@+id/tv_index1"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="15dp"
+        android:background="#F4F4F4" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="14dp"
+            />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/logo"
+            android:text="宝马"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="17dp"
+            android:src="@mipmap/icon_arrow_right_gray" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="15dp"
+            android:background="#F4F4F4" />
+    </RelativeLayout>
+</LinearLayout>

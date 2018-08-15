@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="horizontal"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:layout_marginTop="1dp">
+
+    <CheckBox
+        android:visibility="gone"
+        android:id="@+id/checkbox_danxuan"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:button="@mipmap/img_huodishanchuweixuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/img_icon"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/img_huodijiaoyiweidu"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+    
+    <View
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"
+        android:background="#eeeeee"
+        android:layout_width="1dp"
+        android:layout_height="23dp"/>
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/tv_time"
+            android:layout_marginRight="10dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="#df4242"
+            android:id="@+id/tv_type"
+            android:text="交易物流"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:id="@+id/tv_content"
+            android:textSize="12sp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/tv_type"
+            android:text="订单已发货，请注意查收货物"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_alignParentRight="true"
+            android:text="15:30"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/img_weidu"
+            android:layout_below="@+id/tv_time"
+            android:layout_marginTop="18dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/img_huodidianji111"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

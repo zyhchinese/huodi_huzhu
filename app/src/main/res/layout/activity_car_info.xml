@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#eee">
+
+    <include layout="@layout/layout_base_title"></include>
+
+    <RelativeLayout
+
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_radiobutton_bg"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/shouhuoren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ed_shouhuoren"
+            android:layout_marginTop="6dp"
+            android:text="车牌号"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/ed_shouhuoren"
+            android:layout_alignLeft="@id/img2"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/shouhuoren"
+            android:src="@mipmap/xinghao" />
+
+        <EditText
+            android:id="@+id/ed_shouhuoren"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_edittext_shape_car"
+            android:hint="请输入车牌号"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColorHint="#b4b1b1"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/tv_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ed_phone_number"
+            android:layout_marginTop="6dp"
+            android:text="车辆名称"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ed_phone_number"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/tv_phone_number"
+            android:src="@mipmap/xinghao" />
+
+        <EditText
+            android:id="@+id/ed_phone_number"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ed_shouhuoren"
+            android:layout_gravity="center"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_edittext_shape_car"
+            android:hint="请输入车辆名称"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColorHint="#b4b1b1"
+            android:textSize="16sp" />
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:padding="16dp"
+        android:background="@drawable/bg_radiobutton_bg"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_marginTop="18dp"
+            android:text="最高车速"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_marginLeft="8dp"
+            android:id="@+id/img4"
+            android:src="@mipmap/xinghao"
+            android:layout_marginTop="5dp"
+            android:layout_alignTop="@+id/ed_address"
+            android:layout_toRightOf="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:hint="如：100公里"
+            android:textColorHint="#b4b1b1"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:text="0"
+            android:textSize="16sp"
+            android:background="@drawable/bg_edittext_shape"
+            android:id="@+id/ed_address"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="200dp"
+            android:layout_height="30dp" />
+
+
+        <TextView
+            android:inputType="number"
+            android:layout_below="@+id/tv_address"
+            android:id="@+id/tv_youbian"
+            android:layout_marginTop="25dp"
+            android:text="续航里程"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_marginLeft="8dp"
+            android:id="@+id/img5"
+            android:src="@mipmap/xinghao"
+            android:layout_marginTop="5dp"
+            android:layout_alignTop="@+id/ed_youbian"
+            android:layout_toRightOf="@+id/tv_youbian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_below="@+id/ed_address"
+            android:hint="如：160公里"
+            android:textColorHint="#b4b1b1"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:text="0"
+            android:textSize="16sp"
+            android:background="@drawable/bg_edittext_shape"
+            android:id="@+id/ed_youbian"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="200dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:layout_below="@+id/tv_youbian"
+            android:id="@+id/tv_address1"
+            android:layout_marginTop="22dp"
+            android:text="电机功率"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:layout_below="@+id/ed_youbian"
+            android:hint="如：120kw"
+            android:textColorHint="#b4b1b1"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="16sp"
+            android:text="0"
+            android:background="@drawable/bg_edittext_shape"
+            android:id="@+id/ed_address1"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="200dp"
+            android:layout_height="30dp" />
+
+
+        <TextView
+            android:layout_below="@+id/tv_address1"
+            android:id="@+id/tv_youbian1"
+            android:layout_marginTop="25dp"
+            android:text="发动机型号"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <EditText
+            android:layout_below="@+id/ed_address1"
+            android:hint="如：JSDGJOJAG"
+            android:textColorHint="#b4b1b1"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="16sp"
+            android:text="0"
+            android:background="@drawable/bg_edittext_shape"
+            android:id="@+id/ed_youbian1"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="200dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:layout_below="@+id/tv_youbian1"
+            android:id="@+id/tv_beizhu"
+            android:layout_marginTop="25dp"
+            android:text="备注"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <EditText
+            android:layout_below="@+id/ed_youbian1"
+            android:hint="请添加备注"
+            android:textColorHint="#b4b1b1"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:text="0"
+            android:textSize="16sp"
+            android:background="@drawable/bg_edittext_shape"
+            android:id="@+id/ed_beizhu"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="200dp"
+            android:layout_height="30dp" />
+
+
+
+
+    </RelativeLayout>
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/btn_save"
+        android:text="提交"
+        android:textColor="#ffffff"
+        android:background="#ffb402"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#eee">
+
+    <include layout="@layout/layout_base_common_title"></include>
+
+    <ScrollView
+        android:layout_weight="8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:padding="10dp"
+                android:text="请选择发票类型"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:background="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:background="@drawable/huodi_btn_bg1"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical"
+                    android:layout_width="200dp"
+                    android:layout_height="70dp">
+                    <TextView
+                        android:textSize="18sp"
+                        android:textColor="#c71010"
+                        android:text="电子发票"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:textSize="18sp"
+                        android:textColor="#c71010"
+                        android:text="最多5分钟开具"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </RelativeLayout>
+            <TextView
+                android:padding="10dp"
+                android:text="发票详情"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="20dp"
+                android:background="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="抬头类型"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:id="@+id/linear1"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@mipmap/img_huodi_weixuanzhong"
+                            android:id="@+id/img_feiqiyetaitou"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:text="个人/非企业单位"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear2"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/linear1"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@mipmap/img_huodi_xuanzhong"
+                            android:id="@+id/img_qiyetaitou"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:text="企业抬头"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+                    </LinearLayout>
+
+
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginTop="5dp"
+                    android:background="#eee"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+                <RelativeLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="发票抬头"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/ed_fapiaotaitou"
+                        android:textSize="14sp"
+                        android:background="@null"
+                        android:hint="请填写发票抬头"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginTop="5dp"
+                    android:background="#eee"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/linear3"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="税号"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <EditText
+                            android:id="@+id/ed_shuihao"
+                            android:textSize="14sp"
+                            android:background="@null"
+                            android:hint="请填纳税人识别号"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_marginTop="5dp"
+                        android:background="#eee"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+                    <RelativeLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="地址"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <EditText
+                            android:id="@+id/ed_address"
+                            android:textSize="14sp"
+                            android:background="@null"
+                            android:hint="请填企业地址"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_marginTop="5dp"
+                        android:background="#eee"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+                    <RelativeLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="电话"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <EditText
+                            android:id="@+id/ed_phone1"
+                            android:textSize="14sp"
+                            android:background="@null"
+                            android:hint="请填企业联系电话"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_marginTop="5dp"
+                        android:background="#eee"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+                    <RelativeLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="开户行及账号"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <EditText
+                            android:id="@+id/ed_kaihuhang"
+                            android:textSize="14sp"
+                            android:background="@null"
+                            android:hint="请填开户行及账号"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_marginTop="5dp"
+                        android:background="#eee"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="发票内容"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:text="运输服务费"
+                        android:textColor="#000000"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginTop="5dp"
+                    android:background="#eee"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+                <RelativeLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="发票金额"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/tv_money"
+                        android:layout_marginRight="1dp"
+                        android:layout_toLeftOf="@+id/tv_yuan"
+                        android:text="200"
+                        android:textColor="#c71010"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/tv_yuan"
+                        android:layout_alignParentRight="true"
+                        android:text="元"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginTop="5dp"
+                    android:background="#eee"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+                <RelativeLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="备注"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/ed_beizhu"
+                        android:textSize="14sp"
+                        android:background="@null"
+                        android:hint="购买方、收款人等"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+
+
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:padding="10dp"
+                android:text="收件信息"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_marginBottom="30dp"
+                android:paddingTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="20dp"
+                android:background="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="电子邮箱"
+                    android:textColor="#000000"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/ed_dianziyouxiang"
+                    android:textSize="14sp"
+                    android:background="@null"
+                    android:hint="用于向您发送电子行程单"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_tijiao"
+        android:text="提交"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:background="#c71010"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+
+
+
+
+
+
+
+</LinearLayout>

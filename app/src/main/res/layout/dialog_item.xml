@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:paddingRight="15dp"
+            android:id="@+id/tv_dismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="取消" />
+
+        <TextView
+            android:id="@+id/tv_tltle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="选择车型"
+            android:textSize="18sp" />
+
+        <TextView
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:paddingLeft="15dp"
+            android:textColor="#f20808"
+            android:id="@+id/tv_queren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="确定" />
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/act_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/cx_bz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:text="*车型可多选*" />
+
+    <RelativeLayout
+        android:id="@+id/qtlx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="其他类型："
+            android:textColor="#000000"
+            android:textSize="13dp" />
+
+        <EditText
+            android:id="@+id/tv_qtlx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:hint="最多输入四个字"
+            android:maxLength="4"
+            android:textSize="13dp" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/dialog_goback"
+            android:layout_width="30dp"
+            android:layout_height="25dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/show_main_dialog_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/dialog_sy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/shape_button_login_hei"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:drawablePadding="15dp"
+                    android:drawableRight="@mipmap/icon_arrow_right"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="36dp"
+                    android:paddingRight="36dp"
+                    android:paddingTop="10dp"
+                    android:text="货滴同城"
+                    android:textColor="#000000" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dialog_bj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_button_login_hei"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:drawablePadding="15dp"
+                    android:drawableRight="@mipmap/icon_arrow_right"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="36dp"
+                    android:paddingRight="36dp"
+                    android:paddingTop="10dp"
+                    android:text="货滴搬家"
+                    android:textColor="#000000" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dialog_ky"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_button_login_hei"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@mipmap/icon_arrow_right"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="36dp"
+                    android:paddingRight="36dp"
+                    android:paddingTop="10dp"
+                    android:text="省际/城际"
+                    android:textColor="#000000" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

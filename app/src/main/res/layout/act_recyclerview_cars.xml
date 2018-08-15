@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#eee">
+    <View
+        android:background="#eee"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <android.support.v7.widget.CardView
+        app:cardCornerRadius="10dp"
+        android:background="#ffffff"
+        app:cardElevation="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_toLeftOf="@+id/tv_xiangqing"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:id="@+id/tv_car_name"
+                    android:text="宝马奔驰"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="#000000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_xiangqing"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@mipmap/img_xiaojiantou"
+                    android:text="查看参数详情"
+                    android:textColor="#888888"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#eee">
+
+            </View>
+
+            <RelativeLayout
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_car"
+                    android:layout_marginLeft="20dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="125dp"
+                    android:layout_height="115dp" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/linear"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/img_car"
+                    android:layout_alignTop="@+id/img_car"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@mipmap/img_xiao_car"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/tv_type"
+                        android:textColor="#f08748"
+                        android:text="乘用车"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/linear1"
+                    android:layout_marginTop="7dp"
+                    android:layout_below="@+id/linear"
+                    android:layout_alignLeft="@+id/linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@mipmap/img_xiao_xuhang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/tv_xuhang"
+                        android:text="续航：1000km"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/linear2"
+                    android:layout_marginTop="7dp"
+                    android:layout_below="@+id/linear1"
+                    android:layout_alignLeft="@+id/linear1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@mipmap/img_xiao_dianliang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/tv_dianliang"
+                        android:text="电量：100kWh"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/linear3"
+                    android:layout_marginTop="7dp"
+                    android:layout_below="@+id/linear2"
+                    android:layout_alignLeft="@+id/linear2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@mipmap/img_xiao_chicun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/tv_chicun"
+                        android:text="尺寸：100*100*100m"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/linear4"
+                    android:layout_marginTop="7dp"
+                    android:layout_below="@+id/linear3"
+                    android:layout_alignLeft="@+id/linear3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@mipmap/img_xiao_jiage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/tv_price"
+                        android:text="¥50"
+                        android:textColor="#f08748"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:text="/月    "
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/tv_price1"
+                        android:text="¥500"
+                        android:textColor="#f08748"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:text="/年"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!--<LinearLayout-->
+                    <!--android:layout_marginLeft="28dp"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:id="@+id/linear5"-->
+                    <!--android:layout_alignLeft="@+id/linear4"-->
+                    <!--android:layout_below="@+id/linear4"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_price1"-->
+                        <!--android:text="¥500"-->
+                        <!--android:textColor="#f08748"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content" />-->
+                    <!--<TextView-->
+                        <!--android:text="/年"-->
+                        <!--android:textColor="#000000"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content" />-->
+                <!--</LinearLayout>-->
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

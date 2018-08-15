@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <SurfaceView
+            android:id="@+id/preview_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!--<com.uuzuche.lib_zxing.view.ViewfinderView-->
+            <!--android:id="@+id/viewfinder_view"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:inner_width="200dp"-->
+            <!--app:inner_height="200dp"-->
+            <!--app:inner_margintop="150dp"-->
+            <!--app:inner_corner_color="@color/main_red"-->
+            <!--app:inner_corner_length="30dp"-->
+            <!--app:inner_corner_width="3dp"-->
+            <!--app:inner_scan_bitmap="@mipmap/scan_image"-->
+            <!--app:inner_scan_speed="12"-->
+            <!--app:inner_scan_iscircle="false"-->
+            <!--/>-->
+
+        <com.lx.hd.widgets.CustomViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewpage">
+
+        </com.lx.hd.widgets.CustomViewPager>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="30dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:id="@+id/img_back"
+            android:src="@mipmap/icon_base_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_title_scaner"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img_back"
+            android:textColor="@color/white"
+            android:text="扫码充电"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:id="@+id/img_select_code"
+            android:src="@mipmap/icon_select_code"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/lly_bottom"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:orientation="horizontal"
+        android:background="#AA333333">
+
+        <LinearLayout
+            android:id="@+id/linear0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_scanner"
+                android:background="@drawable/select_scanner" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_scanner"
+                android:text="扫码"
+                android:layout_marginTop="10dp"
+                android:textColor="#FFFFFF"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_input"
+                android:background="@drawable/select_input_code"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_input"
+                android:text="终端编号"
+                android:layout_marginTop="10dp"
+                android:textColor="#FFFFFF"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tv_tips"
+            android:textColor="@color/white"
+            android:text="将二维码/条形码对准取景框，即可自动扫描"/>
+    </RelativeLayout>
+</RelativeLayout>

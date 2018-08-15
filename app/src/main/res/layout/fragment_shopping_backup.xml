@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/layout_shopping_list_title"></include>
+    <com.lx.hd.widgets.MyNestedScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--<com.youth.banner.Banner-->
+            <!--android:id="@+id/banner"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="300dp"-->
+            <!--app:indicator_drawable_selected="@mipmap/icon_banner_select"-->
+            <!--app:indicator_drawable_unselected="@mipmap/icon_banner_unselect"-->
+            <!--app:indicator_height="8dp"-->
+            <!--app:indicator_margin="4dp"-->
+            <!--app:indicator_width="8dp" />-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+    </com.lx.hd.widgets.MyNestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#eeeeee">
+
+    <include layout="@layout/layout_base_common_title"
+        ></include>
+
+    <ScrollView
+        android:padding="10dp"
+        android:background="#eeeeee"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_radiobutton_bg"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/shouhuoren"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="收货人"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:id="@+id/img1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ed_shouhuoren"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/shouhuoren"
+                    android:src="@mipmap/xinghao" />
+
+                <EditText
+                    android:id="@+id/ed_shouhuoren"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_edittext_shape"
+                    android:hint="请填写收货人姓名"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColorHint="#b4b1b1"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/shouhuoren"
+                    android:layout_marginTop="25dp"
+                    android:text="手机号"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:id="@+id/img2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ed_phone_number"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toRightOf="@+id/tv_phone_number"
+                    android:src="@mipmap/xinghao" />
+
+                <EditText
+                    android:inputType="number"
+                    android:id="@+id/ed_phone_number"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/ed_shouhuoren"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/bg_edittext_shape"
+                    android:hint="请填写收货人联系方式"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColorHint="#b4b1b1"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_guding"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ed_guding"
+                    android:text="固定电话"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:inputType="number"
+                    android:id="@+id/ed_guding"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/ed_phone_number"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/bg_edittext_shape"
+                    android:hint="请填写收货人固定电话"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColorHint="#b4b1b1"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:padding="16dp"
+                android:background="@drawable/bg_radiobutton_bg"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_suozai_quyu"
+                    android:layout_marginTop="8dp"
+                    android:text="所在区域"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:visibility="invisible"
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/img3"
+                    android:src="@mipmap/xinghao"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignTop="@+id/spinner_province"
+                    android:layout_toRightOf="@+id/tv_suozai_quyu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <Spinner
+                    android:dropDownVerticalOffset="30dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    android:background="@drawable/bg_spinner_shape"
+                    android:id="@+id/spinner_city"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="90dp"
+                    android:layout_height="30dp">
+
+                </Spinner>
+
+                <Spinner
+                    android:dropDownVerticalOffset="30dp"
+                    android:layout_toLeftOf="@+id/spinner_city"
+                    android:layout_marginRight="15dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    android:background="@drawable/bg_spinner_shape"
+                    android:id="@+id/spinner_province"
+                    android:layout_width="90dp"
+                    android:layout_height="30dp">
+
+                </Spinner>
+
+                <Spinner
+                    android:dropDownVerticalOffset="30dp"
+                    android:layout_below="@+id/spinner_city"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    android:background="@drawable/bg_spinner_shape"
+                    android:id="@+id/spinner_county"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp">
+
+                </Spinner>
+
+
+
+                <TextView
+                    android:layout_below="@+id/spinner_county"
+                    android:id="@+id/tv_address"
+                    android:layout_marginTop="25dp"
+                    android:text="详细地址"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:visibility="invisible"
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/img4"
+                    android:src="@mipmap/xinghao"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignTop="@+id/ed_address"
+                    android:layout_toRightOf="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:layout_below="@+id/spinner_county"
+                    android:hint="请填写详细地址"
+                    android:textColorHint="#b4b1b1"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="16sp"
+                    android:background="@drawable/bg_edittext_shape"
+                    android:id="@+id/ed_address"
+                    android:layout_marginTop="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp" />
+
+
+                <TextView
+                    android:inputType="number"
+                    android:layout_below="@+id/tv_address"
+                    android:id="@+id/tv_youbian"
+                    android:layout_marginTop="25dp"
+                    android:text="邮政编码"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_below="@+id/ed_address"
+                    android:hint="请填写邮政编码"
+                    android:textColorHint="#b4b1b1"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="16sp"
+                    android:background="@drawable/bg_edittext_shape"
+                    android:id="@+id/ed_youbian"
+                    android:layout_marginTop="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp" />
+
+                <TextView
+                    android:layout_below="@+id/tv_youbian"
+                    android:id="@+id/tv_biaoqian"
+                    android:layout_marginTop="25dp"
+                    android:text="地址标签"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_below="@+id/ed_youbian"
+                    android:hint="请填写地址标签"
+                    android:textColorHint="#b4b1b1"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="16sp"
+                    android:background="@drawable/bg_edittext_shape"
+                    android:id="@+id/ed_biaoqian"
+                    android:layout_marginTop="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp" />
+
+
+
+
+
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_marginTop="30dp"
+                android:id="@+id/btn_save"
+                android:text="保存收货人信息"
+                android:textColor="#ffffff"
+                android:background="@drawable/shangpinxiangqing_anniu1"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

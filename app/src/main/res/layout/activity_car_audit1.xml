@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#eee">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rly_title_root"
+        android:background="#ffffff">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingRight="40dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/img_backjiantou"
+            android:id="@+id/img_back" />
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/img_car11"
+                android:id="@+id/img_icon" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_title"
+                android:textSize="18sp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="#333333"
+                android:text="车辆租赁"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear12"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_city"
+                android:textColor="#8a8a8a"
+                android:layout_gravity="center_vertical"
+                android:text="济南市"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingRight="20dp"
+                android:src="@mipmap/img_xiaxiantou"
+                android:id="@+id/img_search" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <EditText
+            android:id="@+id/ed_car_name"
+            android:windowSoftInputMode="adjustPan"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:paddingLeft="50dp"
+            android:paddingRight="15dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:hint="输入相关车型搜索"
+            android:background="@drawable/edittext_shape"
+            android:layout_width="match_parent"
+            android:layout_height="35dp" />
+
+        <ImageView
+            android:layout_marginLeft="110dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/img_search111"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:background="#ffffff"
+        android:id="@+id/act_recyclerView"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>
