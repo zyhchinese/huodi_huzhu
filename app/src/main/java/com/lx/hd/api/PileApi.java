@@ -1068,4 +1068,29 @@ public class PileApi {
     public Observable<ResponseBody> searchVehicleLength() {
         return service.searchVehicleLength();
     }
+
+    //筛选顺风车列表
+    public Observable<ResponseBody> searchFreeRideList(String paraments) {
+        return service.searchFreeRideList(paraments);
+    }
+
+    //顺风车详情
+    public Observable<ResponseBody> selectFreeRideDet(String data) {
+        return service.selectFreeRideDet(data);
+    }
+
+    //选择顺风车行程后进行发快运单
+    public Observable<ResponseBody> addKuaiyunOrderByFreeRide(String data) {
+        return service.addKuaiyunOrderByFreeRide(data);
+    }
+
+    //快运单选择此行程
+    public Observable<ResponseBody> joinFreeRideOne(String data) {
+        return service.joinFreeRideOne(data);
+    }
+
+    //检测是否在此顺风车下发布过订单
+    public Observable<ResponseBody> checkJoinFreeRideOne(String data) {
+        return service.checkJoinFreeRideOne(data);
+    }
 }

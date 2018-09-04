@@ -129,8 +129,29 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content">
                             <ImageView
+                                android:id="@+id/img_shunfengche"
+                                android:src="@mipmap/img_huodishunfengche"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_marginTop="60dp"
+                                android:layout_centerHorizontal="true"
+                                android:text="货滴顺风车"
+                                android:textSize="18sp"
+                                android:textColor="#ffffff"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+                            <ImageView
                                 android:id="@+id/img_kuaiyun"
-                                android:src="@mipmap/img_huodisuyun111"
+                                android:src="@mipmap/img_huodikuaiyun111"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content" />
 
@@ -144,6 +165,17 @@
                                 android:layout_height="wrap_content" />
 
                         </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
                         <RelativeLayout
                             android:layout_weight="1"
                             android:layout_width="0dp"
@@ -151,7 +183,7 @@
 
                             <ImageView
                                 android:id="@+id/img_suyun"
-                                android:src="@mipmap/img_huodikuaiyun111"
+                                android:src="@mipmap/img_huodisuyun111"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content" />
 
@@ -166,34 +198,6 @@
 
                         </RelativeLayout>
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_marginTop="10dp"
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <RelativeLayout
-                            android:layout_weight="1"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content">
-                            <ImageView
-                                android:id="@+id/img_shangcheng"
-                                android:src="@mipmap/img_huodishangcheng111"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
-
-                            <TextView
-                                android:layout_marginTop="60dp"
-                                android:layout_centerHorizontal="true"
-                                android:text="货滴商城"
-                                android:textSize="18sp"
-                                android:textColor="#ffffff"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-
-                        </RelativeLayout>
                         <RelativeLayout
                             android:layout_weight="1"
                             android:layout_width="0dp"
@@ -260,6 +264,59 @@
                                 android:layout_marginTop="60dp"
                                 android:layout_centerHorizontal="true"
                                 android:text="我的钱包"
+                                android:textSize="18sp"
+                                android:textColor="#ffffff"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/img_shangcheng"
+                                android:src="@mipmap/img_huodishangcheng111"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_marginTop="60dp"
+                                android:layout_centerHorizontal="true"
+                                android:text="货滴商城"
+                                android:textSize="18sp"
+                                android:textColor="#ffffff"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/img_huodibaoxian"
+                                android:src="@mipmap/img_huodibaoxian"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_marginTop="60dp"
+                                android:layout_centerHorizontal="true"
+                                android:text="货滴保险"
                                 android:textSize="18sp"
                                 android:textColor="#ffffff"
                                 android:layout_width="wrap_content"

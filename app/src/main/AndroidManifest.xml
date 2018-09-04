@@ -200,8 +200,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activity.BindEmailActivity"
-            android:windowSoftInputMode="adjustPan|stateHidden"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name=".ui.activity.SetEncryptedActivity"
             android:screenOrientation="portrait" />
@@ -210,8 +210,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".account.ModifyPwdActivity"
-            android:windowSoftInputMode="adjustPan|stateHidden"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name=".ui.activity.CarLeaseActivity"
             android:screenOrientation="portrait" />
@@ -249,8 +249,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activity.SetPayPwdActivity"
-            android:windowSoftInputMode="adjustPan|stateHidden"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name=".ui.activity.ChargeMethodActivity"
             android:screenOrientation="portrait"
@@ -260,10 +260,10 @@
 
         <activity
             android:name=".ui.activity.FeedBackActivity"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
+            android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name=".ui.activity.BindQWActivity"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
+            android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity android:name=".ui.activity.NewFeatureIntroduceActivity" />
         <activity android:name=".ui.activity.CommonQuestionActivity" />
         <activity android:name=".ui.activity.LikeMbtActivity" />
@@ -696,7 +696,9 @@
             android:name=".ui.activity.FaBuErShouCheActivity"
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity android:name=".ui.activity.WoDeErShouCheLieBiaoActivity" />
-        <activity android:name=".ui.activity.QianDaoActivity"></activity>
+        <activity android:name=".ui.activity.QianDaoActivity" />
+        <activity android:name=".ui.activity.ShuFengCheLieBiaoActivity" />
+        <activity android:name=".ui.activity.ShuFengCheXiangQingActivity"></activity>
     </application>
 
 </manifest>

@@ -29,14 +29,23 @@ public class KuaiYunSiJiLieBiaoEntity {
     private int driver_num;
     private String driver_folder;
     private String driver_autoname;
-    private boolean type;
+    private boolean type1;
+    private String type;
 
-    public boolean isType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(boolean type) {
+    public void setType(String type) {
         this.type = type;
+    }
+
+    public boolean isType1() {
+        return type1;
+    }
+
+    public void setType1(boolean type1) {
+        this.type1 = type1;
     }
 
     public int getId() {

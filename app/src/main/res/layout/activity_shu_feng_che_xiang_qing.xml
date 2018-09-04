@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f5f5f5">
+
+    <include layout="@layout/layout_base_common_title"/>
+
+
+    <ScrollView
+        android:layout_weight="11"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:id="@+id/linear_sijiname"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:src="@mipmap/img_huodisijixingming789"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:text="司机姓名"
+                    android:textSize="16sp"
+                    android:textColor="#383737"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:gravity="end"
+                    android:id="@+id/tv_sijiname"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <View
+                android:background="#eee"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:id="@+id/linear_qidian"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:src="@mipmap/img_huodishunfengcheqidian"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:text="起点"
+                    android:textSize="16sp"
+                    android:textColor="#383737"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:gravity="end"
+                    android:id="@+id/tv_qidian"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <View
+                android:background="#eee"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:id="@+id/linear_zhongdian"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:src="@mipmap/img_huodishunfengchezhongdian"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:text="终点"
+                    android:textSize="16sp"
+                    android:textColor="#383737"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:gravity="end"
+                    android:id="@+id/tv_zhongdian"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <View
+                android:background="#eee"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:id="@+id/linear_tujingchengshi"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:src="@mipmap/img_huodishunfengchetujingchengshi"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:text="途径"
+                    android:textSize="16sp"
+                    android:textColor="#383737"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:gravity="end"
+                    android:id="@+id/tv_tujingchengshi"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <View
+                android:background="#eee"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:src="@mipmap/img_huodishunfengchechechang"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:text="总车长"
+                    android:textSize="16sp"
+                    android:textColor="#383737"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:gravity="end"
+                        android:id="@+id/tv_zongchechang"
+                        android:layout_weight="9"
+                        android:textSize="16sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:textSize="16sp"
+                        android:text="米"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:background="#eee"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:src="@mipmap/img_huodishunfengchechechang"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:text="可用车长"
+                    android:textSize="16sp"
+                    android:textColor="#383737"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:gravity="end"
+                        android:id="@+id/tv_keyongchechang"
+                        android:layout_weight="9"
+                        android:textSize="16sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:textSize="16sp"
+                        android:text="米"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:background="#eee"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:id="@+id/linear_time"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:src="@mipmap/img_huodishunfengchechufashijian"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:text="出发时间"
+                    android:textSize="16sp"
+                    android:textColor="#383737"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:gravity="end"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <View
+                android:background="#eee"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:id="@+id/linear_createtime"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:src="@mipmap/img_huodishunfengchechufashijian"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:text="行程发布时间"
+                    android:textSize="16sp"
+                    android:textColor="#383737"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_createtime"
+                    android:gravity="end"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <View
+                android:background="#b7b5b5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/tv_call"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:textColor="#ffffff"
+                android:background="@drawable/shunfengche_xuanzeyongche_shape"
+                android:text="打电话"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/tv_fabuxingcheng"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:background="#ff0202"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:text="选择用车"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+
+</LinearLayout>

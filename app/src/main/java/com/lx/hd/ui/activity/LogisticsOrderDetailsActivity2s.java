@@ -98,6 +98,7 @@ public class LogisticsOrderDetailsActivity2s extends BackCommonActivity implemen
     private ImageView img_dizhi_t, img_dizhi_f;
     private LinearLayout linear_kaishi;
     private RelativeLayout relative;
+    private ImageView img_shunfengcherukou;
 
     private RelativeLayout relative1, relative2;
     private View view10;
@@ -278,6 +279,9 @@ public class LogisticsOrderDetailsActivity2s extends BackCommonActivity implemen
     protected void onResume() {
         super.onResume();
         mapView.onResume();
+
+        //加载订单详情信息
+        initOrderDetails();
     }
 
     @Override
@@ -319,6 +323,7 @@ public class LogisticsOrderDetailsActivity2s extends BackCommonActivity implemen
         tv_chengxing = (TextView) findViewById(R.id.tv_chengxing);
         huowuleixing = (TextView) findViewById(R.id.huowuleixing);
         tv_huowuzhongliang = (TextView) findViewById(R.id.tv_huowuzhongliang);
+        img_shunfengcherukou= (ImageView) findViewById(R.id.img_shunfengcherukou);
 
 
         tv_xingming = (TextView) findViewById(R.id.tv_xingming);
@@ -359,9 +364,10 @@ public class LogisticsOrderDetailsActivity2s extends BackCommonActivity implemen
         tv_kaishi.setOnClickListener(this);
         tv_jieshu.setOnClickListener(this);
         tv_pingjia.setOnClickListener(this);
+        img_shunfengcherukou.setOnClickListener(this);
 
-        //加载订单详情信息
-        initOrderDetails();
+//        //加载订单详情信息
+//        initOrderDetails();
         initFeiLv();
 
         getyeData();
@@ -633,7 +639,7 @@ public class LogisticsOrderDetailsActivity2s extends BackCommonActivity implemen
             @Override
             public void onClick(int position) {
                 sijiid = kuaiYunSiJiLieBiaoEntityList.get(position).getId();
-                sijixuanze=kuaiYunSiJiLieBiaoEntityList.get(position).isType();
+                sijixuanze=kuaiYunSiJiLieBiaoEntityList.get(position).isType1();
             }
         });
         adapter.setOnClickCall(new KuaiYunSiJiLieBiaoAdapter.OnClickCall() {
@@ -752,6 +758,12 @@ public class LogisticsOrderDetailsActivity2s extends BackCommonActivity implemen
             img_dizhi_t.setImageResource(R.mipmap.img_huodi_weizhi_f);
             img_dizhi_f.setImageResource(R.mipmap.img_huodi_weizhi_f);
         } else if (detailsEntityList.get(0).getCust_orderstatus() == 0) {
+
+            if (detailsEntityList.get(0).getDriver_orderstatus()==-2){
+                img_shunfengcherukou.setVisibility(View.VISIBLE);
+            }else {
+                img_shunfengcherukou.setVisibility(View.GONE);
+            }
             tv_type.setText("等待接货");
 //            if (detailsEntityList.get(0).getDriver_orderstatus() == 0) {
 //                tv_quxiao.setVisibility(View.GONE);
@@ -1055,6 +1067,17 @@ public class LogisticsOrderDetailsActivity2s extends BackCommonActivity implemen
                     }
                 });
                 alertDialog.show();
+                break;
+            case R.id.img_shunfengcherukou:
+                Intent intent=new Intent(this,ShuFengCheLieBiaoActivity.class);
+                intent.putExtra("dingdanid",detailsEntityList.get(0).getId()+"");
+                intent.putExtra("chufasheng",detailsEntityList.get(0).getSprovince());
+                intent.putExtra("chufashi",detailsEntityList.get(0).getScity());
+                intent.putExtra("chufaxian",detailsEntityList.get(0).getScounty());
+                intent.putExtra("mudisheng",detailsEntityList.get(0).getEprovince());
+                intent.putExtra("mudishi",detailsEntityList.get(0).getEcity());
+                intent.putExtra("mudixian",detailsEntityList.get(0).getEcounty());
+                startActivity(intent);
                 break;
         }
     }

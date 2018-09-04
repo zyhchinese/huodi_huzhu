@@ -252,7 +252,7 @@ public class DingDanZhiFuChengGongActivity extends BackCommonActivity {
         adapter1.setOnClickItem(new KuaiYunAdapter.OnClickItem() {
             @Override
             public void onClick(int position) {
-                Intent intent=new Intent(DingDanZhiFuChengGongActivity.this, LogisticsOrderDetailsActivity2.class);
+                Intent intent=new Intent(DingDanZhiFuChengGongActivity.this, LogisticsOrderDetailsActivity2s.class);
                 intent.putExtra("orderno",auditOrderEntityList2.get(position).getOrderno());
                 intent.putExtra("line","2");
                 startActivity(intent);

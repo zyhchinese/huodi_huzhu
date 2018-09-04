@@ -80,20 +80,25 @@ public class KuaiYunSiJiLieBiaoAdapter extends RecyclerView.Adapter<KuaiYunSiJiL
                 }
             }
         });
+        if (list.get(position).getType().equals("1")){
+            holder.img_jiaobiao.setVisibility(View.VISIBLE);
+        }else {
+            holder.img_jiaobiao.setVisibility(View.GONE);
+        }
         holder.tv_xingji.setText(list.get(position).getDriver_star()+"星");
         holder.tv_jiaoyi.setText("交易"+list.get(position).getDriver_num()+"笔");
         holder.img_xuanze.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 for (KuaiYunSiJiLieBiaoEntity entity:list){
-                    entity.setType(false);
+                    entity.setType1(false);
                 }
                 if (holder.img_xuanze.isChecked()){
                     holder.img_xuanze.setButtonDrawable(R.mipmap.img_huodixuanze1);
-                    list.get(position).setType(true);
+                    list.get(position).setType1(true);
                 }else {
                     holder.img_xuanze.setButtonDrawable(R.mipmap.img_huodixuanze);
-                    list.get(position).setType(false);
+                    list.get(position).setType1(false);
                 }
                 notifyDataSetChanged();
                 if (xuZhongItem!=null){
@@ -103,7 +108,7 @@ public class KuaiYunSiJiLieBiaoAdapter extends RecyclerView.Adapter<KuaiYunSiJiL
 
             }
         });
-        if (list.get(position).isType()){
+        if (list.get(position).isType1()){
             holder.img_xuanze.setButtonDrawable(R.mipmap.img_huodixuanze1);
             holder.img_xuanze.setChecked(true);
         }else {
@@ -122,6 +127,7 @@ public class KuaiYunSiJiLieBiaoAdapter extends RecyclerView.Adapter<KuaiYunSiJiL
         private CheckBox img_xuanze;
         private CircleImageView img_touxiang;
         private TextView tv_name,tv_phone,tv_xingji,tv_jiaoyi;
+        private ImageView img_jiaobiao;
         public ViewHolder(View itemView) {
             super(itemView);
             img_xuanze= (CheckBox) itemView.findViewById(R.id.img_xuanze);
@@ -130,6 +136,7 @@ public class KuaiYunSiJiLieBiaoAdapter extends RecyclerView.Adapter<KuaiYunSiJiL
             tv_phone= (TextView) itemView.findViewById(R.id.tv_phone);
             tv_xingji= (TextView) itemView.findViewById(R.id.tv_xingji);
             tv_jiaoyi= (TextView) itemView.findViewById(R.id.tv_jiaoyi);
+            img_jiaobiao= (ImageView) itemView.findViewById(R.id.img_jiaobiao);
 
 
         }

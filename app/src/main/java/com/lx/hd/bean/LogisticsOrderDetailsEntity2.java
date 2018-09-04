@@ -91,6 +91,69 @@ public class LogisticsOrderDetailsEntity2 {
     private String cust_star;
     private String cust_num;
     private String paytype;
+    private String type;
+    private String sprovince;
+    private String scity;
+    private String scounty;
+    private String eprovince;
+    private String ecity;
+    private String ecounty;
+
+    public String getSprovince() {
+        return sprovince;
+    }
+
+    public void setSprovince(String sprovince) {
+        this.sprovince = sprovince;
+    }
+
+    public String getScity() {
+        return scity;
+    }
+
+    public void setScity(String scity) {
+        this.scity = scity;
+    }
+
+    public String getScounty() {
+        return scounty;
+    }
+
+    public void setScounty(String scounty) {
+        this.scounty = scounty;
+    }
+
+    public String getEprovince() {
+        return eprovince;
+    }
+
+    public void setEprovince(String eprovince) {
+        this.eprovince = eprovince;
+    }
+
+    public String getEcity() {
+        return ecity;
+    }
+
+    public void setEcity(String ecity) {
+        this.ecity = ecity;
+    }
+
+    public String getEcounty() {
+        return ecounty;
+    }
+
+    public void setEcounty(String ecounty) {
+        this.ecounty = ecounty;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 
     public String getPaytype() {
         return paytype;

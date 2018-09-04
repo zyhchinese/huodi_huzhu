@@ -3,9 +3,9 @@ package com.lx.hd.base;
 public class Constant {
 
     //  public static final String BASE_URL ="http://192.168.1.231:8080/showtime/";
-//  public static final String BASE_URL ="http://192.168.1.236:8280/hdsy/";
+  public static final String BASE_URL ="http://192.168.1.236:8280/hdsy/";
 //  public static final String BASE_URL ="http://118.190.47.231:8004/hdsy/";
-  public static final String BASE_URL ="http://www.huodiwulian.com/";
+//  public static final String BASE_URL ="http://www.huodiwulian.com/";
 //  public static final String BASE_URL ="http://192.168.1.57:7099/lxnew/";
 //  public static final String BASE_URL ="http://192.168.1.55/hdsy/";
 //  public static final String BASE_URL ="http://192.168.1.45:8080/maibate2/";

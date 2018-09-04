@@ -1082,4 +1082,32 @@ public interface ApiService {
     //快运车长
     @POST("mbtwz/logisticssendwz?action=searchVehicleLength")
     Observable<ResponseBody> searchVehicleLength();
+
+
+    //筛选顺风车列表
+    @FormUrlEncoded
+    @POST("mbtwz/freeride?action=searchFreeRideList")
+    Observable<ResponseBody> searchFreeRideList(@Field("params") String params);
+
+
+    //顺风车详情
+    @FormUrlEncoded
+    @POST("mbtwz/freeride?action=selectFreeRideDet")
+    Observable<ResponseBody> selectFreeRideDet(@Field("data") String data);
+
+    //选择顺风车行程后进行发快运单
+    @FormUrlEncoded
+    @POST("mbtwz/freeride?action=addKuaiyunOrderByFreeRide")
+    Observable<ResponseBody> addKuaiyunOrderByFreeRide(@Field("data") String data);
+
+
+    //快运单选择此行程
+    @FormUrlEncoded
+    @POST("mbtwz/freeride?action=joinFreeRideOne")
+    Observable<ResponseBody> joinFreeRideOne(@Field("data") String data);
+
+    //检测是否在此顺风车下发布过订单
+    @FormUrlEncoded
+    @POST("mbtwz/freeride?action=checkJoinFreeRideOne")
+    Observable<ResponseBody> checkJoinFreeRideOne(@Field("data") String data);
 }

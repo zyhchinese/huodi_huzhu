@@ -136,6 +136,9 @@ public class HuoDKuaiyunActivity extends BaseActivity implements RouteSearch.OnR
     private ArrayList<ShuJuEntity> chechangdatas;
     private String yongcheleixing="2";
 
+    private String shunfengbiaoshi="10";
+    private String selFreeRideId="";
+
     @Override
     protected int getContentView() {
         return R.layout.activity_huodikuaiyun;
@@ -189,6 +192,7 @@ public class HuoDKuaiyunActivity extends BaseActivity implements RouteSearch.OnR
         contactphone1.setText(sp.getString("custphone", ""));
         mRouteSearch = new RouteSearch(this);
         mRouteSearch.setRouteSearchListener(this);
+        initShunFengCheChuanZhi();
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -330,7 +334,12 @@ public class HuoDKuaiyunActivity extends BaseActivity implements RouteSearch.OnR
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.dismiss();
-                                upload();
+                                if (shunfengbiaoshi.equals("10")){
+                                    upload();
+                                }else {
+                                    upload1();
+                                }
+
 
                             }
                         });
@@ -536,10 +545,55 @@ public class HuoDKuaiyunActivity extends BaseActivity implements RouteSearch.OnR
         initJianceZhouJie();
         initjiance();
 
-        initmorendizhilianxiren();
+
 
         loadcx();
         loadcc();
+    }
+
+    private void initShunFengCheChuanZhi() {
+        Intent intent=getIntent();
+        if (intent.getStringExtra("startaddress")!=null) {
+            String startaddress = intent.getStringExtra("startaddress");
+            String startlongitude = intent.getStringExtra("startlongitude");
+            String startlatitude = intent.getStringExtra("startlatitude");
+            String endaddress = intent.getStringExtra("endaddress");
+            String endlongitude = intent.getStringExtra("endlongitude");
+            String endlatitude = intent.getStringExtra("endlatitude");
+            String total_mileage = intent.getStringExtra("total_mileage");
+            String sprovince = intent.getStringExtra("sprovince");
+            String scity = intent.getStringExtra("scity");
+            String scounty = intent.getStringExtra("scounty");
+            String eprovince = intent.getStringExtra("eprovince");
+            String ecity = intent.getStringExtra("ecity");
+            String ecounty = intent.getStringExtra("ecounty");
+            selFreeRideId = intent.getStringExtra("selFreeRideId");
+            shunfengbiaoshi = intent.getStringExtra("shunfengbiaoshi");
+
+
+            if (shunfengbiaoshi.equals("5")) {
+                qdtext.setText(startaddress);
+                zdtext.setText(endaddress);
+                tv_juli11.setText("" + total_mileage + "km");
+
+                tabledata.setStartaddress(startaddress);
+                tabledata.setStartlongitude(startlongitude);
+                tabledata.setStartlatitude(startlatitude);
+                tabledata.setEndaddress(endaddress);
+                tabledata.setEndlongitude(endlongitude);
+                tabledata.setEndlatitude(endlatitude);
+                tabledata.setTotal_mileage(total_mileage);
+                tabledata.setSprovince(sprovince);
+                tabledata.setScity(scity);
+                tabledata.setScounty(scounty);
+                tabledata.setEprovince(eprovince);
+                tabledata.setEcity(ecity);
+                tabledata.setEcounty(ecounty);
+            }
+        }else {
+            initmorendizhilianxiren();
+        }
+
     }
 
     private void initDialog() {
@@ -1207,6 +1261,133 @@ public class HuoDKuaiyunActivity extends BaseActivity implements RouteSearch.OnR
                             hideWaitDialog();
                         } catch (IOException e) {
                             showToast(e.getLocalizedMessage());
+                        }
+                    }
+
+                    @Override
+                    public void onError(@NonNull Throwable e) {
+                        hideWaitDialog();
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
+    }
+
+    private void upload1() {
+        showWaitDialog("正在刷新信息...");
+        HashMap<String,String> map=new HashMap<>();
+        map.put("contactname",tabledata.getContactphone());
+        map.put("contactphone",tabledata.getContactphone());
+        map.put("startaddress",tabledata.getStartaddress());
+        map.put("startlongitude",tabledata.getStartlongitude());
+        map.put("startlatitude",tabledata.getStartlatitude());
+        map.put("endaddress",tabledata.getEndaddress());
+        map.put("endlongitude",tabledata.getEndlongitude());
+        map.put("endlatitude",tabledata.getEndlatitude());
+        map.put("shipmenttime",tabledata.getShipmenttime());
+        map.put("cartypenames",tabledata.getCartypenames());
+        map.put("cargotypenames",tabledata.getCargotypenames());
+        map.put("weight",tabledata.getWeight());
+        map.put("volume",tabledata.getVolume());
+        map.put("remarks",tabledata.getRemarks());
+        map.put("settheprice",tabledata.getSettheprice());
+        map.put("consignorphone",tabledata.getConsignorphone());
+        map.put("table","huodi_kuaiyun");
+        map.put("sprovince",tabledata.getSprovince());
+        map.put("scity",tabledata.getScity());
+        map.put("scounty",tabledata.getScounty());
+        map.put("eprovince",tabledata.getEprovince());
+        map.put("ecity",tabledata.getEcity());
+        map.put("ecounty",tabledata.getEcounty());
+        map.put("relevant_type",tabledata.getRelevant_type());
+        map.put("use_car_type",tabledata.getUse_car_type());
+        map.put("lengthname",tabledata.getLengthname());
+        map.put("ton_weight",tabledata.getTon_weight());
+        map.put("total_mileage",tabledata.getTotal_mileage());
+        map.put("selFreeRideId",selFreeRideId);
+        Gson gson = new Gson();
+        String data = gson.toJson(map);
+        PileApi.instance.addKuaiyunOrderByFreeRide(data)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<ResponseBody>() {
+                    @Override
+                    public void onSubscribe(@NonNull Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(@NonNull ResponseBody responseBody) {
+
+                        try {
+                            String body = responseBody.string();
+                            // showToast(body);
+                            JSONObject jsonObject=new JSONObject(body);
+                            String flag = jsonObject.getString("flag");
+                            String msg = jsonObject.getString("msg");
+                            if (!flag.equals("200")&&!flag.equals("210")) {
+                                //   if(body.equals("\"false\""))
+                                showToast("提交订单失败，请检查信息后重试");
+                            } else {
+//                                showpaydialog(Float.parseFloat(tabledata.getSettheprice()), body.replace("\"", ""));
+
+                                final AlertDialog dialog1 = new AlertDialog.Builder(HuoDKuaiyunActivity.this).create();
+                                ispayok = true;
+//                                                payalertDialog.dismiss();
+                                dialog1.show();
+                                dialog1.getWindow().setContentView(R.layout.dialog_zhifuchenggong);
+                                dialog1.getWindow().setBackgroundDrawableResource(R.drawable.shape_bg_yuanjiao);
+
+                                WindowManager windowManager = getWindowManager();
+                                Display display = windowManager.getDefaultDisplay();
+                                WindowManager.LayoutParams p = dialog1.getWindow().getAttributes();
+                                p.width = (int) (display.getWidth() * 0.6);
+                                dialog1.getWindow().setAttributes(p);
+
+                                TextView tv_success = (TextView) dialog1.getWindow().findViewById(R.id.tv_success);
+                                tv_success.setText(msg);
+                                TextView textView = (TextView) dialog1.getWindow().findViewById(R.id.tv_chakan);
+                                textView.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        isok = false;
+                                        dialog1.dismiss();
+                                        finish();
+                                        sendPayLocalReceiver(DeliverGoodsActivity.class.getName());
+                                        sendPayLocalReceiver(ShuFengCheLieBiaoActivity.class.getName());
+                                        sendPayLocalReceiver(ShuFengCheXiangQingActivity.class.getName());
+                                        Intent intent = new Intent(HuoDKuaiyunActivity.this, DingDanZhiFuChengGongActivity.class);
+                                        intent.putExtra("type", 2);
+                                        startActivity(intent);
+
+
+//                                        finish();
+                                    }
+                                });
+                                dialog1.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                                    @Override
+                                    public void onDismiss(DialogInterface dialog) {
+                                        finish();
+                                        sendPayLocalReceiver(DeliverGoodsActivity.class.getName());
+                                        sendPayLocalReceiver(ShuFengCheLieBiaoActivity.class.getName());
+                                        sendPayLocalReceiver(ShuFengCheXiangQingActivity.class.getName());
+                                    }
+                                });
+
+
+//                                Gson gson = new Gson();
+//                                List<CarPP> CarPPList = gson.fromJson(body, new TypeToken<List<CarPP>>() {
+//                                }.getType());
+//                                updateInfo(CarPPList);
+                            }
+                            hideWaitDialog();
+                        } catch (IOException e) {
+                            showToast(e.getLocalizedMessage());
+                        } catch (JSONException e) {
+                            e.printStackTrace();
                         }
                     }
 
